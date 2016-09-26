@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Achefinil" />
+  <meta name="keywords" content="nodejs," />
 
 
 
@@ -84,15 +84,19 @@
 
 
 
-<meta name="description" content="지나간 것은 지나간대로">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Achefinil">
-<meta property="og:url" content="http://achefinil.com/categories/歌曲/index.html">
+<meta name="description" content="最近项目中使用log4js打印日志，令人苦恼的是，本地日志测试的时候都没有丢失过，而部署到线上就会有丢日志的情况。追查了一下发现原来在多进程下，每个进程都要执行rename与create的操作。造成了文件的覆盖与丢失。
+以下内容有参考原文">
+<meta property="og:type" content="article">
+<meta property="og:title" content="log4js多进程造成日志丢失">
+<meta property="og:url" content="http://achefinil.com/2016/09/26/log4js日志多进程造成日志丢失/index.html">
 <meta property="og:site_name" content="Achefinil">
-<meta property="og:description" content="지나간 것은 지나간대로">
+<meta property="og:description" content="最近项目中使用log4js打印日志，令人苦恼的是，本地日志测试的时候都没有丢失过，而部署到线上就会有丢日志的情况。追查了一下发现原来在多进程下，每个进程都要执行rename与create的操作。造成了文件的覆盖与丢失。
+以下内容有参考原文">
+<meta property="og:updated_time" content="2016-09-26T09:00:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Achefinil">
-<meta name="twitter:description" content="지나간 것은 지나간대로">
+<meta name="twitter:title" content="log4js多进程造成日志丢失">
+<meta name="twitter:description" content="最近项目中使用log4js打印日志，令人苦恼的是，本地日志测试的时候都没有丢失过，而部署到线上就会有丢日志的情况。追查了一下发现原来在多进程下，每个进程都要执行rename与create的操作。造成了文件的覆盖与丢失。
+以下内容有参考原文">
 
 
 
@@ -113,9 +117,9 @@
 
 
 
-  <link rel="canonical" href="http://achefinil.com/categories/歌曲/"/>
+  <link rel="canonical" href="http://achefinil.com/2016/09/26/log4js日志多进程造成日志丢失/"/>
 
-  <title> 分类: 歌曲 | Achefinil </title>
+  <title> log4js多进程造成日志丢失 | Achefinil </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -146,7 +150,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -224,47 +228,164 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        歌曲
-        <small>分类</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                log4js多进程造成日志丢失
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-26T16:08:19+08:00" content="2016-09-26">
+              2016-09-26
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/26/log4js日志多进程造成日志丢失/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/26/log4js日志多进程造成日志丢失/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/26/log4js日志多进程造成日志丢失/" class="leancloud_visitors" data-flag-title="log4js多进程造成日志丢失">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p>　　最近项目中使用log4js打印日志，令人苦恼的是，本地日志测试的时候都没有丢失过，而部署到线上就会有丢日志的情况。追查了一下发现原来在多进程下，每个进程都要执行rename与create的操作。造成了文件的覆盖与丢失。</p>
+<p><a href="http://blog.csdn.net/hfty290/article/details/42843303" target="_blank" rel="external">以下内容有参考原文</a></p>
+<a id="more"></a>
+<h2 id="问题深究"><a href="#问题深究" class="headerlink" title="问题深究"></a>问题深究</h2><p>　　在单进程环境中大家会使用file或者datefile类型的Appender实例来写日志，并且为了日志的自动清除还设置了滚动方式，按照文件大小或者日期进行滚动。但是这两种类型的Appender在达到滚动阈值时，先进性rename，然后创建一个新的文件，把后面的内容写入到新的文件中。</p>
+<pre><code>rename cheese.log cheese.log.2016-09-22
+create file cheese.log  
+write cheese.log
+</code></pre><p>　　在单进程环境中，这完全没有问题，但是在多进程环境就会有问题。线上是多进程。问题就出在每个进程都要执行上面的rename与create操作。在多进程写同一个文件时，实际上只要有一个进程执行rename与create操作就行了。</p>
+<pre><code>## 进程A先被触发，执行换天备份日志操作：  
+rename out.log out.log.2016-09-22
+create file out.log  
+write out.log  
 
-      <h1 class="post-title">
+## 在后面的某个时间，进程B也被触发了，再次执行换天备份日志操作：  
+rename out.log out.log.2016-09-22
+create file out.log  
+write out.log
+</code></pre><p>　　在被执行了第二次之后，2016-09-21上的数据其实丢失了，out.log.2016-09-22文件内容只是进程A备份到进程B备份，这段时间的日志。现在问题说清楚了，我们来想想解决方案。 </p>
+<blockquote>
+<p>问题的关键出在多个进程在不同时候执行了换天备份操作，那么如果能够保证只有一个进程执行换天备份就没问题了。 </p>
+</blockquote>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><ul>
+<li><p>在log4js中提供了两种这种类型的Appender，分别是clustered与multiprocess，都是在master进程上开启监听，worker进程将日志简单地发送给master，日志的写入备份等操作都有master进程进行。但是这种方式有一个缺点，日志通过网络传输，node是先缓冲到本地数组，然后提供给socket缓冲区，假如网络写入速度比日志写入速度慢，那么以为着进程的内存占用会越来越多，最终可想而知了。 </p>
+</li>
+<li><p>另外一种更好地方式是使用datefile类型的Appender，但是设置alwaysIncludePattern属性为true，也就是说每次写日志直接写在 out-2016-09-22.log这样的文件上，换天的时候写到新的日志文件即可。这种方式就去掉了rename日志的过程，从而避免多进程导致的日志rename混乱。</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2015/10/29/IF-YOU/" itemprop="url">
-              
-                <span itemprop="name">If You</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2015-10-29T22:03:49+08:00"
-              content="2015-10-29" >
-          10-29
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/nodejs/" rel="tag">#nodejs</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/13/Git-Quick-Start/" rel="next" title="Git Quick Start">
+                <i class="fa fa-chevron-left"></i> Git Quick Start
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </section>
 
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -272,6 +393,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/26/log4js日志多进程造成日志丢失/"
+           data-title="log4js多进程造成日志丢失" data-url="http://achefinil.com/2016/09/26/log4js日志多进程造成日志丢失/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -291,8 +420,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/img/avatar.jpg"
@@ -362,6 +500,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题深究"><span class="nav-number">1.</span> <span class="nav-text">问题深究</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决"><span class="nav-number">2.</span> <span class="nav-text">解决</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -458,6 +607,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
