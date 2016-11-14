@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://achefinil.com/2016/09/26/log4js日志多进程造成日志丢失/index.html">
 <meta property="og:site_name" content="Achefinil">
 <meta property="og:description" content="最近项目中使用log4js打印日志，令人苦恼的是，本地日志测试的时候都没有丢失过，而部署到线上就会有丢日志的情况。追查了一下发现原来在多进程下，每个进程都要执行rename与create的操作。造成了文件的覆盖与丢失。">
-<meta property="og:updated_time" content="2016-09-26T09:02:55.000Z">
+<meta property="og:updated_time" content="2016-11-14T03:02:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="log4js多进程造成日志丢失">
 <meta name="twitter:description" content="最近项目中使用log4js打印日志，令人苦恼的是，本地日志测试的时候都没有丢失过，而部署到线上就会有丢日志的情况。追查了一下发现原来在多进程下，每个进程都要执行rename与create的操作。造成了文件的覆盖与丢失。">
@@ -189,6 +189,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -263,6 +273,25 @@
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Node/" itemprop="url" rel="index">
+                    <span itemprop="name">Node</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -449,10 +478,10 @@ write out.log
 
           
             <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">2</span>
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 

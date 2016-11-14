@@ -96,7 +96,7 @@
 
 在Terminal / git Bash中敲下面的命令：
 1234## 生成密钥，一路回车即可（如果需要重新生成注意一下）ssh-keygen -t rsa ## 显示">
-<meta property="og:updated_time" content="2016-11-10T07:02:48.000Z">
+<meta property="og:updated_time" content="2016-11-14T03:03:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git无密码操作 添加SSHKey">
 <meta name="twitter:description" content="Git仓库之间的代码传输协议主要使用ssh协议。而一般搭建Gitlab的时候使用的git用户是没有密码的，因此直接ssh是不能登录的，就需要使用ssh-keygen上传公钥，使用非对称加密传输。下面讲述如何上传你的ssh公钥：
@@ -198,6 +198,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -273,6 +283,25 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -316,7 +345,7 @@
 </blockquote>
 <p><em>在Terminal / git Bash中敲下面的命令：</em></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 生成密钥，一路回车即可（如果需要重新生成注意一下）</span></div><div class="line">ssh-keygen -t rsa </div><div class="line"><span class="comment">## 显示刚才生成的公钥内容，自行拷贝到Gitlab</span></div><div class="line">cat ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure>
-<p>最后粘贴到账户的ssh配置处，完。</p>
+<p>最后粘贴到账户的ssh配置处。</p>
 
       
     </div>
@@ -433,10 +462,10 @@
 
           
             <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">2</span>
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
