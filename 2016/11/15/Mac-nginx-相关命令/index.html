@@ -86,26 +86,20 @@
 
 <meta name="description" content="各个系统下的nginx的相关命令类似，就OS下使用。（注意如果权限不足需要在下述命令前输入 “sudo”）。
 停止操作（两个步骤）1.查询nginx主进程号ps -ef | grep nginx
-2.停止命令（3种，酌情使用）123456## 从容停止kill -QUIT 主进程号## 快速停止kill -TERM 主进程号##强制停止kill -9 主进程号
-平滑重启
-如果更改了配置，并不需要总">
+2.停止命令（3种，酌情使用）123456## 从容停止kill -QUIT 主进程号## 快速停止kill -TERM 主进程号##强制停止kill -9 主进程号">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac nginx 相关命令">
 <meta property="og:url" content="http://achefinil.com/2016/11/15/Mac-nginx-相关命令/index.html">
 <meta property="og:site_name" content="Achefinil">
 <meta property="og:description" content="各个系统下的nginx的相关命令类似，就OS下使用。（注意如果权限不足需要在下述命令前输入 “sudo”）。
 停止操作（两个步骤）1.查询nginx主进程号ps -ef | grep nginx
-2.停止命令（3种，酌情使用）123456## 从容停止kill -QUIT 主进程号## 快速停止kill -TERM 主进程号##强制停止kill -9 主进程号
-平滑重启
-如果更改了配置，并不需要总">
-<meta property="og:updated_time" content="2016-11-15T08:39:48.000Z">
+2.停止命令（3种，酌情使用）123456## 从容停止kill -QUIT 主进程号## 快速停止kill -TERM 主进程号##强制停止kill -9 主进程号">
+<meta property="og:updated_time" content="2016-11-15T08:50:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac nginx 相关命令">
 <meta name="twitter:description" content="各个系统下的nginx的相关命令类似，就OS下使用。（注意如果权限不足需要在下述命令前输入 “sudo”）。
 停止操作（两个步骤）1.查询nginx主进程号ps -ef | grep nginx
-2.停止命令（3种，酌情使用）123456## 从容停止kill -QUIT 主进程号## 快速停止kill -TERM 主进程号##强制停止kill -9 主进程号
-平滑重启
-如果更改了配置，并不需要总">
+2.停止命令（3种，酌情使用）123456## 从容停止kill -QUIT 主进程号## 快速停止kill -TERM 主进程号##强制停止kill -9 主进程号">
 
 
 
@@ -346,6 +340,7 @@
         <p>各个系统下的nginx的相关命令类似，就OS下使用。（注意如果权限不足需要在下述命令前输入 “sudo”）。</p>
 <h1 id="停止操作（两个步骤）"><a href="#停止操作（两个步骤）" class="headerlink" title="停止操作（两个步骤）"></a>停止操作（两个步骤）</h1><h2 id="1-查询nginx主进程号"><a href="#1-查询nginx主进程号" class="headerlink" title="1.查询nginx主进程号"></a>1.查询nginx主进程号</h2><pre><code>ps -ef | grep nginx
 </code></pre><h2 id="2-停止命令（3种，酌情使用）"><a href="#2-停止命令（3种，酌情使用）" class="headerlink" title="2.停止命令（3种，酌情使用）"></a>2.停止命令（3种，酌情使用）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 从容停止</span></div><div class="line"><span class="built_in">kill</span> -QUIT 主进程号</div><div class="line"><span class="comment">## 快速停止</span></div><div class="line"><span class="built_in">kill</span> -TERM 主进程号</div><div class="line"><span class="comment">##强制停止</span></div><div class="line"><span class="built_in">kill</span> -9 主进程号</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h1 id="平滑重启"><a href="#平滑重启" class="headerlink" title="平滑重启"></a>平滑重启</h1><blockquote>
 <p>如果更改了配置，并不需要总是关闭再打开。同样要先拿到主进程号，同上第一步骤。</p>
 </blockquote>
