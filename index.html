@@ -258,6 +258,144 @@
             
               
                 
+                <a class="post-title-link" href="/2016/11/15/Mac-nginx-相关命令/" itemprop="url">
+                  Mac nginx 相关命令
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-15T15:54:25+08:00" content="2016-11-15">
+              2016-11-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Mac/" itemprop="url" rel="index">
+                    <span itemprop="name">Mac</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/15/Mac-nginx-相关命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/15/Mac-nginx-相关命令/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/11/15/Mac-nginx-相关命令/" class="leancloud_visitors" data-flag-title="Mac nginx 相关命令">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>各个系统下的nginx的相关命令类似，就OS下使用。（注意如果权限不足需要在下述命令前输入 “sudo”）。</p>
+<h1 id="停止操作（两个步骤）"><a href="#停止操作（两个步骤）" class="headerlink" title="停止操作（两个步骤）"></a>停止操作（两个步骤）</h1><h2 id="1-查询nginx主进程号"><a href="#1-查询nginx主进程号" class="headerlink" title="1.查询nginx主进程号"></a>1.查询nginx主进程号</h2><pre><code>ps -ef | grep nginx
+</code></pre><h2 id="2-停止命令（3种，酌情使用）"><a href="#2-停止命令（3种，酌情使用）" class="headerlink" title="2.停止命令（3种，酌情使用）"></a>2.停止命令（3种，酌情使用）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 从容停止</span></div><div class="line"><span class="built_in">kill</span> -QUIT 主进程号</div><div class="line"><span class="comment">## 快速停止</span></div><div class="line"><span class="built_in">kill</span> -TERM 主进程号</div><div class="line"><span class="comment">##强制停止</span></div><div class="line"><span class="built_in">kill</span> -9 主进程号</div></pre></td></tr></table></figure>
+<h1 id="平滑重启"><a href="#平滑重启" class="headerlink" title="平滑重启"></a>平滑重启</h1><blockquote>
+<p>如果更改了配置，并不需要总是关闭再打开。同样要先拿到主进程号，同上第一步骤。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 后面是主进称号或进程号文件路径</span></div><div class="line"><span class="built_in">kill</span> -HUP 主进程号</div></pre></td></tr></table></figure>
+<blockquote>
+<p>如果修改了配置文件后最好先检查一下修改过的配置文件是否正确</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nginx -t -c config文件路径</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/11/10/Git无密码操作-添加SSHKey/" itemprop="url">
                   Git无密码操作 添加SSHKey
                 </a>
@@ -1458,7 +1596,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
