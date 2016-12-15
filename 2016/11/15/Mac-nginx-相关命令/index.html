@@ -94,7 +94,7 @@
 <meta property="og:description" content="各个系统下的nginx的相关命令类似，就OS下使用。（注意如果权限不足需要在下述命令前输入 “sudo”）。
 停止操作（两个步骤）1.查询nginx主进程号ps -ef | grep nginx
 2.停止命令（3种，酌情使用）123456## 从容停止kill -QUIT 主进程号## 快速停止kill -TERM 主进程号## 强制停止kill -9 主进程号">
-<meta property="og:updated_time" content="2016-11-15T08:53:10.000Z">
+<meta property="og:updated_time" content="2016-12-15T07:17:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac nginx 相关命令">
 <meta name="twitter:description" content="各个系统下的nginx的相关命令类似，就OS下使用。（注意如果权限不足需要在下述命令前输入 “sudo”）。
@@ -345,6 +345,10 @@
 <p>如果更改了配置，并不需要总是关闭再打开。同样要先拿到主进程号，同上第一步骤。</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 后面是主进称号或进程号文件路径</span></div><div class="line"><span class="built_in">kill</span> -HUP 主进程号</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>另外推荐的重载配置的方式</strong></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/<span class="built_in">local</span>/nginx/sbin/nginx <span class="_">-s</span> reload</div></pre></td></tr></table></figure>
 <blockquote>
 <p>如果修改了配置文件后最好先检查一下修改过的配置文件是否正确</p>
 </blockquote>
