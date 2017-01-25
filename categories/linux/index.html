@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="nodejs," />
+  <meta name="keywords" content="Achefinil" />
 
 
 
@@ -84,16 +84,15 @@
 
 
 
-<meta name="description" content="PM2 是一个带有负载均衡功能的 Node 应用的进程管理器。当你要把你的独立代码利用全部的服务器上的所有 CPU，并保证进程永远都活着，0 秒的重载。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="PM2">
-<meta property="og:url" content="http://achefinil.com/2016/12/14/PM2/index.html">
+<meta name="description" content="지나간 것은 지나간대로">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Achefinil">
+<meta property="og:url" content="http://achefinil.com/categories/linux/index.html">
 <meta property="og:site_name" content="Achefinil">
-<meta property="og:description" content="PM2 是一个带有负载均衡功能的 Node 应用的进程管理器。当你要把你的独立代码利用全部的服务器上的所有 CPU，并保证进程永远都活着，0 秒的重载。">
-<meta property="og:updated_time" content="2016-12-14T08:00:01.000Z">
+<meta property="og:description" content="지나간 것은 지나간대로">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PM2">
-<meta name="twitter:description" content="PM2 是一个带有负载均衡功能的 Node 应用的进程管理器。当你要把你的独立代码利用全部的服务器上的所有 CPU，并保证进程永远都活着，0 秒的重载。">
+<meta name="twitter:title" content="Achefinil">
+<meta name="twitter:description" content="지나간 것은 지나간대로">
 
 
 
@@ -114,9 +113,9 @@
 
 
 
-  <link rel="canonical" href="http://achefinil.com/2016/12/14/PM2/"/>
+  <link rel="canonical" href="http://achefinil.com/categories/linux/"/>
 
-  <title> PM2 | Achefinil </title>
+  <title> 分类: linux | Achefinil </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -147,7 +146,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -235,172 +234,47 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                PM2
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-14T15:49:07+08:00" content="2016-12-14">
-              2016-12-14
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Node/" itemprop="url" rel="index">
-                    <span itemprop="name">Node</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/14/PM2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/14/PM2/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/12/14/PM2/" class="leancloud_visitors" data-flag-title="PM2">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p><strong>PM2 是一个带有负载均衡功能的 Node 应用的进程管理器。</strong><br>当你要把你的独立代码利用全部的服务器上的所有 CPU，并保证进程永远都活着，0 秒的重载。<br><a id="more"></a></p>
-<h2 id="主要特性"><a href="#主要特性" class="headerlink" title="主要特性"></a>主要特性</h2><ul>
-<li>内建负载均衡（使用 Node cluster 集群模块）</li>
-<li>后台运行</li>
-<li>0 秒停机重载，我理解大概意思是维护升级的时候不需要停机.</li>
-<li>具有 Ubuntu 和 CentOS 的启动脚本</li>
-<li>停止不稳定的进程（避免无限循环）</li>
-<li>控制台检测</li>
-<li>提供 HTTP API</li>
-<li>远程控制和实时的接口 API ( Nodejs 模块，允许和 PM2 进程管理器交互 )</li>
-</ul>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre><code>npm install -g pm2
-</code></pre><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">$ npm install pm2 -g     <span class="comment"># 命令行安装 pm2 </span></div><div class="line">$ pm2 start app.js -i 4  <span class="comment"># 后台运行pm2，启动4个app.js </span></div><div class="line">                         <span class="comment"># 也可以把'max' 参数传递给 start</span></div><div class="line">                         <span class="comment"># 正确的进程数目依赖于Cpu的核心数目</span></div><div class="line">$ pm2 start app.js --name my-api <span class="comment"># 命名进程</span></div><div class="line">$ pm2 list               <span class="comment"># 显示所有进程状态</span></div><div class="line">$ pm2 monit              <span class="comment"># 监视所有进程</span></div><div class="line">$ pm2 logs               <span class="comment"># 显示所有进程日志</span></div><div class="line">$ pm2 stop all           <span class="comment"># 停止所有进程</span></div><div class="line">$ pm2 restart all        <span class="comment"># 重启所有进程</span></div><div class="line">$ pm2 reload all         <span class="comment"># 0 秒停机重载进程 (用于 NETWORKED 进程)</span></div><div class="line">$ pm2 stop 0             <span class="comment"># 停止指定的进程</span></div><div class="line">$ pm2 restart 0          <span class="comment"># 重启指定的进程</span></div><div class="line">$ pm2 startup            <span class="comment"># 产生 init 脚本 保持进程活着</span></div><div class="line">$ pm2 web                <span class="comment"># 运行健壮的 computer API endpoint (http://localhost:9615)</span></div><div class="line">$ pm2 delete 0           <span class="comment"># 杀死指定的进程</span></div><div class="line">$ pm2 delete all         <span class="comment"># 杀死全部进程~~</span></div></pre></td></tr></table></figure>
-      
+  <section id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        linux
+        <small>分类</small>
+      </h2>
     </div>
 
-    <div>
+    
       
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-
-      
-    </div>
-
-    <div>
-      
+            <a class="post-title-link" href="/2017/01/24/linux中使用mysql/" itemprop="url">
+              
+                <span itemprop="name">linux中使用mysql</span>
+              
+            </a>
         
+      </h1>
 
-      
-    </div>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-01-24T10:18:06+08:00"
+              content="2017-01-24" >
+          01-24
+        </time>
+      </div>
 
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/nodejs/" rel="tag">#nodejs</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/11/17/Mac-解决端口占用/" rel="next" title="Mac 解决端口占用">
-                <i class="fa fa-chevron-left"></i> Mac 解决端口占用
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/16/Interactively-Manage-Node-n/" rel="prev" title="node.js 版本控制 - n">
-                node.js 版本控制 - n <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+
 
 
           </div>
@@ -408,14 +282,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/12/14/PM2/"
-           data-title="PM2" data-url="http://achefinil.com/2016/12/14/PM2/">
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -435,17 +301,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/img/avatar.jpg"
@@ -515,17 +372,6 @@
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#主要特性"><span class="nav-number">1.</span> <span class="nav-text">主要特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">3.</span> <span class="nav-text">使用</span></a></li></ol></div>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -622,10 +468,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
-
 
   
 
