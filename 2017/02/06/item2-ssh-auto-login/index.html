@@ -85,18 +85,18 @@
 
 
 <meta name="description" content="Mac 中可以使用 Iterm2 ssh访问远程机器。可以使用它的Profiles这个功能实现自动登录。
-写一个脚本，记录相关需要信息。（~/.ssh/ache）存放位置自定12345678910#!/usr/bin/expect -f  set user &amp;lt;用户名&amp;gt;  set host &amp;lt;ip地址&amp;gt;  set password &amp;lt;密码&amp;gt;  set timeou">
+写一个脚本，记录相关需要信息。（~/.ssh/ache）存放位置自定12345678910#!/usr/bin/expect -f  set user &amp;lt;用户名&amp;gt;  set host &amp;lt;ip地址&amp;gt;  set password &amp;lt;密码&amp;gt;  set timeo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="item2 ssh实现自动登录">
 <meta property="og:url" content="http://achefinil.com/2017/02/06/item2-ssh-auto-login/index.html">
 <meta property="og:site_name" content="Achefinil">
 <meta property="og:description" content="Mac 中可以使用 Iterm2 ssh访问远程机器。可以使用它的Profiles这个功能实现自动登录。
-写一个脚本，记录相关需要信息。（~/.ssh/ache）存放位置自定12345678910#!/usr/bin/expect -f  set user &amp;lt;用户名&amp;gt;  set host &amp;lt;ip地址&amp;gt;  set password &amp;lt;密码&amp;gt;  set timeou">
-<meta property="og:updated_time" content="2017-02-06T05:58:24.000Z">
+写一个脚本，记录相关需要信息。（~/.ssh/ache）存放位置自定12345678910#!/usr/bin/expect -f  set user &amp;lt;用户名&amp;gt;  set host &amp;lt;ip地址&amp;gt;  set password &amp;lt;密码&amp;gt;  set timeo">
+<meta property="og:updated_time" content="2017-05-31T09:20:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="item2 ssh实现自动登录">
 <meta name="twitter:description" content="Mac 中可以使用 Iterm2 ssh访问远程机器。可以使用它的Profiles这个功能实现自动登录。
-写一个脚本，记录相关需要信息。（~/.ssh/ache）存放位置自定12345678910#!/usr/bin/expect -f  set user &amp;lt;用户名&amp;gt;  set host &amp;lt;ip地址&amp;gt;  set password &amp;lt;密码&amp;gt;  set timeou">
+写一个脚本，记录相关需要信息。（~/.ssh/ache）存放位置自定12345678910#!/usr/bin/expect -f  set user &amp;lt;用户名&amp;gt;  set host &amp;lt;ip地址&amp;gt;  set password &amp;lt;密码&amp;gt;  set timeo">
 
 
 
@@ -334,7 +334,8 @@
       
 
       
-        <p>Mac 中可以使用 Iterm2 ssh访问远程机器。可以使用它的Profiles这个功能实现自动登录。</p>
+        <hr>
+<p>Mac 中可以使用 Iterm2 ssh访问远程机器。可以使用它的Profiles这个功能实现自动登录。</p>
 <h2 id="写一个脚本，记录相关需要信息。（-ssh-ache）存放位置自定"><a href="#写一个脚本，记录相关需要信息。（-ssh-ache）存放位置自定" class="headerlink" title="写一个脚本，记录相关需要信息。（~/.ssh/ache）存放位置自定"></a>写一个脚本，记录相关需要信息。（~/.ssh/ache）存放位置自定</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/expect -f</span></div><div class="line">  <span class="built_in">set</span> user &lt;用户名&gt;</div><div class="line">  <span class="built_in">set</span> host &lt;ip地址&gt;</div><div class="line">  <span class="built_in">set</span> password &lt;密码&gt;</div><div class="line">  <span class="built_in">set</span> timeout -1</div><div class="line">  spawn ssh <span class="variable">$user</span>@<span class="variable">$host</span></div><div class="line">  expect <span class="string">"*assword:*"</span></div><div class="line">  send <span class="string">"<span class="variable">$password</span>\r"</span></div><div class="line">  interact</div><div class="line">  expect eof</div></pre></td></tr></table></figure>
 <h2 id="配置Profiles"><a href="#配置Profiles" class="headerlink" title="配置Profiles"></a>配置Profiles</h2><p>打开iterm2， Preferences - Profiles - （+）新建一个。<br>填写Name与Command<em>（expect ~/.ssh/ache）</em>刚才写的脚本。</p>
 <h2 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h2><p>这样就告一段落了。可以使用快捷键（command + o）来选择生效不同的配置。</p>
@@ -376,6 +377,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/31/Vim/" rel="prev" title="vim visual block">
+                vim visual block <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -447,7 +452,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

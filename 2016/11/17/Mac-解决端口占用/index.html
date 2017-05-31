@@ -96,7 +96,7 @@
 12java.rmi.server.ExportException: Port already in use: 1099; nested exception is: java.net.BindException: Address already in use
  查看占用该端口的进程
 1lsof -i tcp:1099">
-<meta property="og:updated_time" content="2016-11-18T02:14:25.000Z">
+<meta property="og:updated_time" content="2017-05-31T09:21:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac 解决端口占用">
 <meta name="twitter:description" content="Tomcat启动时报以下错误
@@ -340,7 +340,8 @@
       
 
       
-        <p><strong> Tomcat启动时报以下错误</strong></p>
+        <hr>
+<p><strong> Tomcat启动时报以下错误</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">java.rmi.server.ExportException: Port already in use: <span class="number">1099</span>; nested exception is: </div><div class="line">java.net.BindException: Address already in use</div></pre></td></tr></table></figure>
 <p><strong> 查看占用该端口的进程</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">lsof -i tcp:1099</div></pre></td></tr></table></figure>
@@ -349,7 +350,6 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">COMMAND  PID      USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME</div><div class="line"> java    1376 achefinil   20u  IPv6 0xbf8ce0cb4c234839      0t0  TCP</div></pre></td></tr></table></figure>
 <p><strong> 直接kill掉</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">kill</span> -9 1099</div></pre></td></tr></table></figure>
-
       
     </div>
 
@@ -456,7 +456,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

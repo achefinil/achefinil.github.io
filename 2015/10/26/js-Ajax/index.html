@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://achefinil.com/2015/10/26/js-Ajax/index.html">
 <meta property="og:site_name" content="Achefinil">
 <meta property="og:description" content="最近为了减少页面加载文件大小，省去了jQuery包。直接使用原生js码了Ajax。">
-<meta property="og:updated_time" content="2016-09-13T14:05:27.000Z">
+<meta property="og:updated_time" content="2017-05-31T09:21:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js-Ajax">
 <meta name="twitter:description" content="最近为了减少页面加载文件大小，省去了jQuery包。直接使用原生js码了Ajax。">
@@ -331,14 +331,15 @@
       
 
       
-        <blockquote>
+        <hr>
+<blockquote>
 <p>最近为了减少页面加载文件大小，省去了jQuery包。直接使用原生js码了Ajax。</p>
 </blockquote>
 <a id="more"></a>
 <pre><code>/**
  * @函数说明 Ajax封装
  * @修改历史
- *         2015-09-18  Achefinil    重写ajax
+ *      2015-09-18  Achefinil   重写ajax
  */
 function AjaxClass(){  
     var XmlHttp = false;  
@@ -352,7 +353,7 @@ function AjaxClass(){
                 XmlHttp = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);  
             } catch(e3) {  
                 showMsg(&quot;请使用现代浏览器&quot;);  
-                   XmlHttp = false;  
+                XmlHttp = false;  
             }  
         }  
      }  
@@ -363,16 +364,14 @@ function AjaxClass(){
     this.param = &quot;&quot;;  
     this.CallBack = function(){};  
     this.Loading = function(){};  
-
     this.Send = function(){  
-           if (this.Url==&quot;&quot;){
+        if (this.Url==&quot;&quot;){
             return false;  
         }  
         if (!XmlHttp){
             return IframePost();  
         }  
-
-           XmlHttp.open (this.Method, this.Url, this.Async);  
+        XmlHttp.open (this.Method, this.Url, this.Async);  
         if (this.Method==&quot;POST&quot;){
             XmlHttp.setRequestHeader(&quot;Content-Type&quot;,&quot;application/x-www-form-urlencoded&quot;);  
         }  
@@ -384,20 +383,20 @@ function AjaxClass(){
                 }else{
                     if(XmlHttp.status == 0){
                         showMsg(&quot;网络异常，请检查您的网络&quot;);  
-                     }else{
-                         showMsg(&quot;登陆失败，请稍后重试&quot;);  
-                     }
+                    }else{
+                        showMsg(&quot;登陆失败，请稍后重试&quot;);  
+                    }
                     return;
                 }
                 XmlHttp = null;  
-                   me.CallBack(Result);  
+                me.CallBack(Result);  
             }else{  
                 me.Loading();  
-             }  
+            }  
         };
 
         if (this.Method==&quot;POST&quot;){  
-               XmlHttp.send(this.param);
+            XmlHttp.send(this.param);
         } else {  
             XmlHttp.send(null);  
         }  
@@ -422,18 +421,18 @@ function AjaxClass(){
 </blockquote>
 <pre><code>//调用ajax
 var Ajax = new AjaxClass();// 创建AJAX对象  
- Ajax.Method = &quot;POST&quot;;// 设置请求方式为POST  
- Ajax.Url = // URL
- Ajax.Async = true;// 是否异步  
- Ajax.param = // 参数
- Ajax.Loading = function(){  //等待函数  
-    //     document.write(&quot;loading...&quot;);  
- };
+Ajax.Method = &quot;POST&quot;;// 设置请求方式为POST  
+Ajax.Url = // URL
+Ajax.Async = true;// 是否异步  
+Ajax.param = // 参数
+Ajax.Loading = function(){  //等待函数  
+    //  document.write(&quot;loading...&quot;);  
+};
 
- Ajax.CallBack = function(response) {
-     // 回调函数 ...    
- };
- Ajax.Send(); 
+Ajax.CallBack = function(response) {
+    // 回调函数 ... 
+};
+Ajax.Send(); 
 </code></pre>
       
     </div>
@@ -547,7 +546,7 @@ var Ajax = new AjaxClass();// 创建AJAX对象
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://achefinil.com/2016/12/14/PM2/index.html">
 <meta property="og:site_name" content="Achefinil">
 <meta property="og:description" content="PM2 是一个带有负载均衡功能的 Node 应用的进程管理器。当你要把你的独立代码利用全部的服务器上的所有 CPU，并保证进程永远都活着，0 秒的重载。">
-<meta property="og:updated_time" content="2016-12-14T08:00:01.000Z">
+<meta property="og:updated_time" content="2017-05-31T09:20:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PM2">
 <meta name="twitter:description" content="PM2 是一个带有负载均衡功能的 Node 应用的进程管理器。当你要把你的独立代码利用全部的服务器上的所有 CPU，并保证进程永远都活着，0 秒的重载。">
@@ -331,7 +331,8 @@
       
 
       
-        <p><strong>PM2 是一个带有负载均衡功能的 Node 应用的进程管理器。</strong><br>当你要把你的独立代码利用全部的服务器上的所有 CPU，并保证进程永远都活着，0 秒的重载。<br><a id="more"></a></p>
+        <hr>
+<p><strong>PM2 是一个带有负载均衡功能的 Node 应用的进程管理器。</strong><br>当你要把你的独立代码利用全部的服务器上的所有 CPU，并保证进程永远都活着，0 秒的重载。<br><a id="more"></a></p>
 <h2 id="主要特性"><a href="#主要特性" class="headerlink" title="主要特性"></a>主要特性</h2><ul>
 <li>内建负载均衡（使用 Node cluster 集群模块）</li>
 <li>后台运行</li>
@@ -343,7 +344,11 @@
 <li>远程控制和实时的接口 API ( Nodejs 模块，允许和 PM2 进程管理器交互 )</li>
 </ul>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre><code>npm install -g pm2
-</code></pre><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">$ npm install pm2 -g     <span class="comment"># 命令行安装 pm2 </span></div><div class="line">$ pm2 start app.js -i 4  <span class="comment"># 后台运行pm2，启动4个app.js </span></div><div class="line">                         <span class="comment"># 也可以把'max' 参数传递给 start</span></div><div class="line">                         <span class="comment"># 正确的进程数目依赖于Cpu的核心数目</span></div><div class="line">$ pm2 start app.js --name my-api <span class="comment"># 命名进程</span></div><div class="line">$ pm2 list               <span class="comment"># 显示所有进程状态</span></div><div class="line">$ pm2 monit              <span class="comment"># 监视所有进程</span></div><div class="line">$ pm2 logs               <span class="comment"># 显示所有进程日志</span></div><div class="line">$ pm2 stop all           <span class="comment"># 停止所有进程</span></div><div class="line">$ pm2 restart all        <span class="comment"># 重启所有进程</span></div><div class="line">$ pm2 reload all         <span class="comment"># 0 秒停机重载进程 (用于 NETWORKED 进程)</span></div><div class="line">$ pm2 stop 0             <span class="comment"># 停止指定的进程</span></div><div class="line">$ pm2 restart 0          <span class="comment"># 重启指定的进程</span></div><div class="line">$ pm2 startup            <span class="comment"># 产生 init 脚本 保持进程活着</span></div><div class="line">$ pm2 web                <span class="comment"># 运行健壮的 computer API endpoint (http://localhost:9615)</span></div><div class="line">$ pm2 delete 0           <span class="comment"># 杀死指定的进程</span></div><div class="line">$ pm2 delete all         <span class="comment"># 杀死全部进程~~</span></div></pre></td></tr></table></figure>
+</code></pre><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>```bash<br>$ npm install pm2 -g     # 命令行安装 pm2<br>$ pm2 start app.js -i 4  # 后台运行pm2，启动4个app.js </p>
+<pre><code># 也可以把&apos;max&apos; 参数传递给 start
+# 正确的进程数目依赖于Cpu的核心数目
+</code></pre><p>$ pm2 start app.js –name my-api # 命名进程<br>$ pm2 list               # 显示所有进程状态<br>$ pm2 monit              # 监视所有进程<br>$ pm2 logs               # 显示所有进程日志<br>$ pm2 stop all           # 停止所有进程<br>$ pm2 restart all        # 重启所有进程<br>$ pm2 reload all         # 0 秒停机重载进程 (用于 NETWORKED 进程)<br>$ pm2 stop 0             # 停止指定的进程<br>$ pm2 restart 0          # 重启指定的进程<br>$ pm2 startup            # 产生 init 脚本 保持进程活着<br>$ pm2 web                # 运行健壮的 computer API endpoint (<a href="http://localhost:9615" target="_blank" rel="external">http://localhost:9615</a>)<br>$ pm2 delete 0           # 杀死指定的进程<br>$ pm2 delete all         # 杀死全部进程~~ ```</p>
+
       
     </div>
 
@@ -456,7 +461,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

@@ -258,6 +258,131 @@
             
               
                 
+                <a class="post-title-link" href="/2017/05/31/Vim/" itemprop="url">
+                  vim visual block
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-05-31T17:15:08+08:00" content="2017-05-31">
+              2017-05-31
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/05/31/Vim/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/31/Vim/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/05/31/Vim/" class="leancloud_visitors" data-flag-title="vim visual block">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<blockquote>
+<p>用注释举例</p>
+</blockquote>
+<p><strong>多行注释：</strong></p>
+<ul>
+<li>进入命令行模式，按ctrl + v进入 visual block模式，然后按j, 或者k选中多行，把需要注释的行标记起来</li>
+<li>按大写字母I，再插入注释符，例如//</li>
+<li>按esc键就会全部注释了</li>
+</ul>
+<p><strong>取消多行注释：</strong></p>
+<ul>
+<li>进入命令行模式，按ctrl + v进入 visual block模式，按字母l横向选中列的个数，例如 // 需要选中2列</li>
+<li>按字母j，或者k选中注释符号</li>
+<li>按d键就可全部取消注释</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/02/06/item2-ssh-auto-login/" itemprop="url">
                   item2 ssh实现自动登录
                 </a>
@@ -337,7 +462,8 @@
       
         
           
-            <p>Mac 中可以使用 Iterm2 ssh访问远程机器。可以使用它的Profiles这个功能实现自动登录。</p>
+            <hr>
+<p>Mac 中可以使用 Iterm2 ssh访问远程机器。可以使用它的Profiles这个功能实现自动登录。</p>
 <h2 id="写一个脚本，记录相关需要信息。（-ssh-ache）存放位置自定"><a href="#写一个脚本，记录相关需要信息。（-ssh-ache）存放位置自定" class="headerlink" title="写一个脚本，记录相关需要信息。（~/.ssh/ache）存放位置自定"></a>写一个脚本，记录相关需要信息。（~/.ssh/ache）存放位置自定</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/expect -f</span></div><div class="line">  <span class="built_in">set</span> user &lt;用户名&gt;</div><div class="line">  <span class="built_in">set</span> host &lt;ip地址&gt;</div><div class="line">  <span class="built_in">set</span> password &lt;密码&gt;</div><div class="line">  <span class="built_in">set</span> timeout -1</div><div class="line">  spawn ssh <span class="variable">$user</span>@<span class="variable">$host</span></div><div class="line">  expect <span class="string">"*assword:*"</span></div><div class="line">  send <span class="string">"<span class="variable">$password</span>\r"</span></div><div class="line">  interact</div><div class="line">  expect eof</div></pre></td></tr></table></figure>
 <h2 id="配置Profiles"><a href="#配置Profiles" class="headerlink" title="配置Profiles"></a>配置Profiles</h2><p>打开iterm2， Preferences - Profiles - （+）新建一个。<br>填写Name与Command<em>（expect ~/.ssh/ache）</em>刚才写的脚本。</p>
 <h2 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h2><p>这样就告一段落了。可以使用快捷键（command + o）来选择生效不同的配置。</p>
@@ -468,7 +594,8 @@
 
       
         
-          <p><strong>新年第一更。在node中连接了mysql，记录一下。</strong></p>
+          <hr>
+<p><strong>新年第一更。在node中连接了mysql，记录一下。</strong></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2017/01/24/linux中使用mysql/#more" rel="contents">
               阅读全文 &raquo;
@@ -600,7 +727,8 @@
       
         
           
-            <blockquote>
+            <hr>
+<blockquote>
 <p>“no subshells, no profile setup, no convoluted api, just simple”</p>
 </blockquote>
 <h2 id="安装-n"><a href="#安装-n" class="headerlink" title="安装 n"></a>安装 n</h2><p>如果机器上没有node与npm环境，也可以直接git clone源码安装（需要切换到n目录中执行 make install）。</p>
@@ -738,7 +866,8 @@
 
       
         
-          <p><strong>PM2 是一个带有负载均衡功能的 Node 应用的进程管理器。</strong><br>当你要把你的独立代码利用全部的服务器上的所有 CPU，并保证进程永远都活着，0 秒的重载。<br>
+          <hr>
+<p><strong>PM2 是一个带有负载均衡功能的 Node 应用的进程管理器。</strong><br>当你要把你的独立代码利用全部的服务器上的所有 CPU，并保证进程永远都活着，0 秒的重载。<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/12/14/PM2/#more" rel="contents">
               阅读全文 &raquo;
@@ -869,7 +998,8 @@
 
       
         
-          <p><strong> Tomcat启动时报以下错误</strong></p>
+          <hr>
+<p><strong> Tomcat启动时报以下错误</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">java.rmi.server.ExportException: Port already in use: <span class="number">1099</span>; nested exception is: </div><div class="line">java.net.BindException: Address already in use</div></pre></td></tr></table></figure>
 <p><strong> 查看占用该端口的进程</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">lsof -i tcp:1099</div></pre></td></tr></table></figure>
@@ -1003,7 +1133,8 @@
 
       
         
-          <p>各个系统下的nginx的相关命令类似，就OS下使用。（注意如果权限不足需要在下述命令前输入 “sudo”）。</p>
+          <hr>
+<p>各个系统下的nginx的相关命令类似，就OS下使用。（注意如果权限不足需要在下述命令前输入 “sudo”）。</p>
 <h1 id="停止操作（两个步骤）"><a href="#停止操作（两个步骤）" class="headerlink" title="停止操作（两个步骤）"></a>停止操作（两个步骤）</h1><h2 id="1-查询nginx主进程号"><a href="#1-查询nginx主进程号" class="headerlink" title="1.查询nginx主进程号"></a>1.查询nginx主进程号</h2><pre><code>ps -ef | grep nginx
 </code></pre><h2 id="2-停止命令（3种，酌情使用）"><a href="#2-停止命令（3种，酌情使用）" class="headerlink" title="2.停止命令（3种，酌情使用）"></a>2.停止命令（3种，酌情使用）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 从容停止</span></div><div class="line"><span class="built_in">kill</span> -QUIT 主进程号</div><div class="line"><span class="comment">## 快速停止</span></div><div class="line"><span class="built_in">kill</span> -TERM 主进程号</div><div class="line"><span class="comment">## 强制停止</span></div><div class="line"><span class="built_in">kill</span> -9 主进程号</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
@@ -1137,7 +1268,8 @@
       
         
           
-            <blockquote>
+            <hr>
+<blockquote>
 <p>Git仓库之间的代码传输协议主要使用ssh协议。而一般搭建Gitlab的时候使用的git用户是没有密码的，因此直接ssh是不能登录的，就需要使用ssh-keygen上传公钥，使用非对称加密传输。下面讲述如何上传你的ssh公钥：</p>
 </blockquote>
 <p><em>在Terminal / git Bash中敲下面的命令：</em></p>
@@ -1271,7 +1403,8 @@
       
         
           
-            <p>最近Mac上使用一些命令 总有一些记不住的 记录一下<br>以下命令 需在「终端 Terminal」中执行 </p>
+            <hr>
+<p>最近Mac上使用一些命令 总有一些记不住的 记录一下<br>以下命令 需在「终端 Terminal」中执行 </p>
 <blockquote>
 <p>显示隐藏文件</p>
 </blockquote>
@@ -1408,143 +1541,10 @@
 
       
         
-          <p>　　最近项目中使用log4js打印日志，令人苦恼的是，本地日志测试的时候都没有丢失过，而部署到线上就会有丢日志的情况。追查了一下发现原来在多进程下，每个进程都要执行rename与create的操作。造成了文件的覆盖与丢失。</p>
+          <hr>
+<p>　　最近项目中使用log4js打印日志，令人苦恼的是，本地日志测试的时候都没有丢失过，而部署到线上就会有丢日志的情况。追查了一下发现原来在多进程下，每个进程都要执行rename与create的操作。造成了文件的覆盖与丢失。</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/09/26/log4js日志多进程造成日志丢失/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/13/Git-Quick-Start/" itemprop="url">
-                  Git Quick Start
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-13T22:02:17+08:00" content="2016-09-13">
-              2016-09-13
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/13/Git-Quick-Start/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/13/Git-Quick-Start/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/09/13/Git-Quick-Start/" class="leancloud_visitors" data-flag-title="Git Quick Start">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>最近在比较频繁的使用git，摘写了一些git常用的命令。</p>
-</blockquote>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>常用配置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 配置全局用户名、邮箱，主要用于 commit 身份信息</span></div><div class="line">$ git config --global user.name <span class="string">"achefinil"</span></div><div class="line">$ git config --global user.email <span class="string">"hi@achefinil.com"</span></div><div class="line"> </div><div class="line"><span class="comment"># 配置缩写，强烈推荐，之后就不必敲那么多字符了</span></div><div class="line">$ git config --global alias.br branch</div><div class="line">$ git config --global alias.co checkout</div><div class="line">$ git config --global alias.ci commit</div></pre></td></tr></table></figure></p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/09/13/Git-Quick-Start/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1619,7 +1619,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
