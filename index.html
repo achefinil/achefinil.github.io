@@ -90,6 +90,7 @@
 <meta property="og:url" content="http://achefinil.com/index.html">
 <meta property="og:site_name" content="Achefinil">
 <meta property="og:description" content="지나간 것은 지나간대로">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Achefinil">
 <meta name="twitter:description" content="지나간 것은 지나간대로">
@@ -611,7 +612,7 @@ pip install shadowsocks ##安装shadowsocks
           
             <hr>
 <p>Mac 中可以使用 Iterm2 ssh访问远程机器。可以使用它的Profiles这个功能实现自动登录。</p>
-<h2 id="写一个脚本，记录相关需要信息。（-ssh-ache）存放位置自定"><a href="#写一个脚本，记录相关需要信息。（-ssh-ache）存放位置自定" class="headerlink" title="写一个脚本，记录相关需要信息。（~/.ssh/ache）存放位置自定"></a>写一个脚本，记录相关需要信息。（~/.ssh/ache）存放位置自定</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/expect -f</span></div><div class="line">  <span class="built_in">set</span> user &lt;用户名&gt;</div><div class="line">  <span class="built_in">set</span> host &lt;ip地址&gt;</div><div class="line">  <span class="built_in">set</span> password &lt;密码&gt;</div><div class="line">  <span class="built_in">set</span> timeout -1</div><div class="line">  spawn ssh <span class="variable">$user</span>@<span class="variable">$host</span></div><div class="line">  expect <span class="string">"*assword:*"</span></div><div class="line">  send <span class="string">"<span class="variable">$password</span>\r"</span></div><div class="line">  interact</div><div class="line">  expect eof</div></pre></td></tr></table></figure>
+<h2 id="写一个脚本，记录相关需要信息。（-ssh-ache）存放位置自定"><a href="#写一个脚本，记录相关需要信息。（-ssh-ache）存放位置自定" class="headerlink" title="写一个脚本，记录相关需要信息。（~/.ssh/ache）存放位置自定"></a>写一个脚本，记录相关需要信息。（~/.ssh/ache）存放位置自定</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/expect -f</span></span><br><span class="line">  <span class="built_in">set</span> user &lt;用户名&gt;</span><br><span class="line">  <span class="built_in">set</span> host &lt;ip地址&gt;</span><br><span class="line">  <span class="built_in">set</span> password &lt;密码&gt;</span><br><span class="line">  <span class="built_in">set</span> timeout -1</span><br><span class="line">  spawn ssh <span class="variable">$user</span>@<span class="variable">$host</span></span><br><span class="line">  expect <span class="string">"*assword:*"</span></span><br><span class="line">  send <span class="string">"<span class="variable">$password</span>\r"</span></span><br><span class="line">  interact</span><br><span class="line">  expect eof</span><br></pre></td></tr></table></figure>
 <h2 id="配置Profiles"><a href="#配置Profiles" class="headerlink" title="配置Profiles"></a>配置Profiles</h2><p>打开iterm2， Preferences - Profiles - （+）新建一个。<br>填写Name与Command<em>（expect ~/.ssh/ache）</em>刚才写的脚本。</p>
 <h2 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h2><p>这样就告一段落了。可以使用快捷键（command + o）来选择生效不同的配置。</p>
 
@@ -868,9 +869,9 @@ pip install shadowsocks ##安装shadowsocks
 <pre><code>$ npm install -g n
 </code></pre><p><strong>成功后，Terminal中键入如下命令（会列出已经安装并标记正在使用的版本，可以通过上下键切换要使用的版本，按回车生效）。</strong></p>
 <pre><code>$ n
-</code></pre><h2 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ n latest <span class="comment">#安装最新的版本</span></div><div class="line">$ n stable <span class="comment">#安装稳定版本</span></div><div class="line">$ n rm 0.10.1 <span class="comment">#删除某个版本</span></div><div class="line">$ n use 0.10.21 some.js <span class="comment">#以指定的版本来执行脚本</span></div></pre></td></tr></table></figure>
+</code></pre><h2 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ n latest <span class="comment">#安装最新的版本</span></span><br><span class="line">$ n stable <span class="comment">#安装稳定版本</span></span><br><span class="line">$ n rm 0.10.1 <span class="comment">#删除某个版本</span></span><br><span class="line">$ n use 0.10.21 some.js <span class="comment">#以指定的版本来执行脚本</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p><a href="https://github.com/tj/n" target="_blank" rel="external">https://github.com/tj/n</a></p>
+<p><a href="https://github.com/tj/n" target="_blank" rel="noopener">https://github.com/tj/n</a></p>
 </blockquote>
 
           
@@ -1119,9 +1120,9 @@ pip install shadowsocks ##安装shadowsocks
         
           <hr>
 <p><strong> Tomcat启动时报以下错误</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">java.rmi.server.ExportException: Port already in use: <span class="number">1099</span>; nested exception is: </div><div class="line">java.net.BindException: Address already in use</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java.rmi.server.ExportException: Port already in use: <span class="number">1099</span>; nested exception is: </span><br><span class="line">java.net.BindException: Address already in use</span><br></pre></td></tr></table></figure>
 <p><strong> 查看占用该端口的进程</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">lsof -i tcp:1099</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -i tcp:1099</span><br></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/11/17/Mac-解决端口占用/#more" rel="contents">
               阅读全文 &raquo;
@@ -1248,7 +1249,7 @@ pip install shadowsocks ##安装shadowsocks
           <hr>
 <p>各个系统下的nginx的相关命令类似，就OS下使用。（注意如果权限不足需要在下述命令前输入 “sudo”）。</p>
 <h1 id="停止操作（两个步骤）"><a href="#停止操作（两个步骤）" class="headerlink" title="停止操作（两个步骤）"></a>停止操作（两个步骤）</h1><h2 id="1-查询nginx主进程号"><a href="#1-查询nginx主进程号" class="headerlink" title="1.查询nginx主进程号"></a>1.查询nginx主进程号</h2><pre><code>ps -ef | grep nginx
-</code></pre><h2 id="2-停止命令（3种，酌情使用）"><a href="#2-停止命令（3种，酌情使用）" class="headerlink" title="2.停止命令（3种，酌情使用）"></a>2.停止命令（3种，酌情使用）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 从容停止</span></div><div class="line"><span class="built_in">kill</span> -QUIT 主进程号</div><div class="line"><span class="comment">## 快速停止</span></div><div class="line"><span class="built_in">kill</span> -TERM 主进程号</div><div class="line"><span class="comment">## 强制停止</span></div><div class="line"><span class="built_in">kill</span> -9 主进程号</div></pre></td></tr></table></figure>
+</code></pre><h2 id="2-停止命令（3种，酌情使用）"><a href="#2-停止命令（3种，酌情使用）" class="headerlink" title="2.停止命令（3种，酌情使用）"></a>2.停止命令（3种，酌情使用）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 从容停止</span></span><br><span class="line"><span class="built_in">kill</span> -QUIT 主进程号</span><br><span class="line"><span class="comment">## 快速停止</span></span><br><span class="line"><span class="built_in">kill</span> -TERM 主进程号</span><br><span class="line"><span class="comment">## 强制停止</span></span><br><span class="line"><span class="built_in">kill</span> -9 主进程号</span><br></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/11/15/Mac-nginx-相关命令/#more" rel="contents">
               阅读全文 &raquo;
@@ -1378,7 +1379,7 @@ pip install shadowsocks ##安装shadowsocks
 <p>Git仓库之间的代码传输协议主要使用ssh协议。而一般搭建Gitlab的时候使用的git用户是没有密码的，因此直接ssh是不能登录的，就需要使用ssh-keygen上传公钥，使用非对称加密传输。下面讲述如何上传你的ssh公钥：</p>
 </blockquote>
 <p><em>在Terminal / git Bash中敲下面的命令：</em></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 生成密钥，一路回车即可（如果需要重新生成注意一下）</span></div><div class="line">ssh-keygen -t rsa </div><div class="line"><span class="comment">## 显示刚才生成的公钥内容，自行拷贝到Gitlab</span></div><div class="line">cat ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 生成密钥，一路回车即可（如果需要重新生成注意一下）</span></span><br><span class="line">ssh-keygen -t rsa </span><br><span class="line"><span class="comment">## 显示刚才生成的公钥内容，自行拷贝到Gitlab</span></span><br><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
 <p>最后粘贴到账户的ssh配置处。</p>
 
           

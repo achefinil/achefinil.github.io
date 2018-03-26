@@ -85,11 +85,13 @@
 
 
 <meta name="description" content="最近项目中使用log4js打印日志，令人苦恼的是，本地日志测试的时候都没有丢失过，而部署到线上就会有丢日志的情况。追查了一下发现原来在多进程下，每个进程都要执行rename与create的操作。造成了文件的覆盖与丢失。">
+<meta name="keywords" content="nodejs">
 <meta property="og:type" content="article">
 <meta property="og:title" content="log4js多进程造成日志丢失">
 <meta property="og:url" content="http://achefinil.com/2016/09/26/log4js日志多进程造成日志丢失/index.html">
 <meta property="og:site_name" content="Achefinil">
 <meta property="og:description" content="最近项目中使用log4js打印日志，令人苦恼的是，本地日志测试的时候都没有丢失过，而部署到线上就会有丢日志的情况。追查了一下发现原来在多进程下，每个进程都要执行rename与create的操作。造成了文件的覆盖与丢失。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-05-31T09:21:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="log4js多进程造成日志丢失">
@@ -327,7 +329,7 @@
         <hr>
 <p>　　最近项目中使用log4js打印日志，令人苦恼的是，本地日志测试的时候都没有丢失过，而部署到线上就会有丢日志的情况。追查了一下发现原来在多进程下，每个进程都要执行rename与create的操作。造成了文件的覆盖与丢失。</p>
 <a id="more"></a>
-<p><a href="http://blog.csdn.net/hfty290/article/details/42843303" target="_blank" rel="external">以下内容有参考原文</a></p>
+<p><a href="http://blog.csdn.net/hfty290/article/details/42843303" target="_blank" rel="noopener">以下内容有参考原文</a></p>
 <h2 id="问题深究"><a href="#问题深究" class="headerlink" title="问题深究"></a>问题深究</h2><p>　　在单进程环境中大家会使用file或者datefile类型的Appender实例来写日志，并且为了日志的自动清除还设置了滚动方式，按照文件大小或者日期进行滚动。但是这两种类型的Appender在达到滚动阈值时，先进性rename，然后创建一个新的文件，把后面的内容写入到新的文件中。</p>
 <pre><code>rename cheese.log cheese.log.2016-09-22
 create file cheese.log  
