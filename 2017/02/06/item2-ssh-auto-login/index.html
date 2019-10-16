@@ -2,7 +2,7 @@
 
 
 
-  
+
 
 
 <html class="theme-next mist use-motion">
@@ -27,36 +27,36 @@
 
 
 
-  
-  
+
+
   <link href="/libs/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
-  
-  
-  
-  
 
-  
-    
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
+
 
 
 
@@ -123,7 +123,7 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  
+
 
 
 
@@ -144,17 +144,17 @@
 
 
 
-  
-  
-    
-  
+
+
+
+
 
   <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-meta ">
-  
+
 
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
@@ -175,57 +175,57 @@
 </div>
 
 <nav class="site-nav">
-  
 
-  
+
+
     <ul id="menu" class="menu">
-      
-        
+
+
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            
+
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
+
             首页
           </a>
         </li>
-      
-        
+
+
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
-            
+
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
+
             分类
           </a>
         </li>
-      
-        
+
+
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
-            
+
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
+
             归档
           </a>
         </li>
-      
-        
+
+
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
-            
+
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
+
             标签
           </a>
         </li>
-      
 
-      
+
+
     </ul>
-  
 
-  
+
+
 </nav>
 
  </div>
@@ -235,34 +235,34 @@
       <div class="main-inner">
         <div class="content-wrap">
           <div id="content" class="content">
-            
+
 
   <div id="posts" class="posts-expand">
-    
 
-  
-  
 
-  
-  
-  
+
+
+
+
+
+
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
-    
+
       <header class="post-header">
 
-        
-        
+
+
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
+
+
+
                 item2 ssh实现自动登录
-              
-            
+
+
           </h1>
-        
+
 
         <div class="post-meta">
           <span class="post-time">
@@ -275,35 +275,35 @@
             </time>
           </span>
 
-          
+
             <span class="post-category" >
               &nbsp; | &nbsp;
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
-              
+
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Mac/" itemprop="url" rel="index">
                     <span itemprop="name">Mac</span>
                   </a>
                 </span>
 
-                
-                
 
-              
+
+
+
             </span>
-          
 
-          
-            
-          
 
-          
 
-          
-          
+
+
+
+
+
+
+
              <span id="/2017/02/06/item2-ssh-auto-login/" class="leancloud_visitors" data-flag-title="item2 ssh实现自动登录">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
@@ -312,99 +312,99 @@
                <span class="post-meta-item-text">阅读次数 </span>
                <span class="leancloud-visitors-count"></span>
               </span>
-          
 
-          
+
+
         </div>
       </header>
-    
+
 
 
     <div class="post-body" itemprop="articleBody">
 
-      
-      
 
-      
+
+
+
         <hr>
 <p>Mac 中可以使用 Iterm2 ssh访问远程机器。可以使用它的Profiles这个功能实现自动登录。</p>
 <h2 id="写一个脚本，记录相关需要信息。（-ssh-ache）存放位置自定"><a href="#写一个脚本，记录相关需要信息。（-ssh-ache）存放位置自定" class="headerlink" title="写一个脚本，记录相关需要信息。（~/.ssh/ache）存放位置自定"></a>写一个脚本，记录相关需要信息。（~/.ssh/ache）存放位置自定</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/expect -f</span></span><br><span class="line">  <span class="built_in">set</span> user &lt;用户名&gt;</span><br><span class="line">  <span class="built_in">set</span> host &lt;ip地址&gt;</span><br><span class="line">  <span class="built_in">set</span> password &lt;密码&gt;</span><br><span class="line">  <span class="built_in">set</span> timeout -1</span><br><span class="line">  spawn ssh <span class="variable">$user</span>@<span class="variable">$host</span></span><br><span class="line">  expect <span class="string">"*assword:*"</span></span><br><span class="line">  send <span class="string">"<span class="variable">$password</span>\r"</span></span><br><span class="line">  interact</span><br><span class="line">  expect eof</span><br></pre></td></tr></table></figure>
 <h2 id="配置Profiles"><a href="#配置Profiles" class="headerlink" title="配置Profiles"></a>配置Profiles</h2><p>打开iterm2， Preferences - Profiles - （+）新建一个。<br>填写Name与Command<em>（expect ~/.ssh/ache）</em>刚才写的脚本。</p>
 <h2 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h2><p>这样就告一段落了。可以使用快捷键（command + o）来选择生效不同的配置。</p>
 
-      
+
     </div>
 
     <div>
-      
-        
 
-      
+
+
+
     </div>
 
     <div>
-      
-        
 
-      
+
+
+
     </div>
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Linux/" rel="tag">#Linux</a>
-          
-        </div>
-      
 
-      
+        <div class="post-tags">
+
+            <a href="/tags/Linux/" rel="tag">#Linux</a>
+
+        </div>
+
+
+
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-            
+
               <a href="/2017/01/24/linux中使用mysql/" rel="next" title="linux中使用mysql">
                 <i class="fa fa-chevron-left"></i> linux中使用mysql
               </a>
-            
+
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
+
               <a href="/2017/05/31/Vim/" rel="prev" title="vim visual block">
                 vim visual block <i class="fa fa-chevron-right"></i>
               </a>
-            
+
           </div>
         </div>
-      
 
-      
-      
+
+
+
     </footer>
   </article>
 
 
 
     <div class="post-spread">
-      
+
     </div>
   </div>
 
 
           </div>
-          
 
 
-          
+
+
   <div class="comments" id="comments">
-    
+
   </div>
 
 
         </div>
-        
-          
-  
+
+
+
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
       <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
@@ -416,9 +416,9 @@
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
-      
 
-      
+
+
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
             文章目录
@@ -427,14 +427,14 @@
             站点概览
           </li>
         </ul>
-      
+
 
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/img/avatar.jpg"
-               alt="김상" />
-          <p class="site-author-name" itemprop="name">김상</p>
+               alt="김성" />
+          <p class="site-author-name" itemprop="name">김성</p>
           <p class="site-description motion-element" itemprop="description">지나간 것은 지나간대로</p>
         </div>
         <nav class="site-state motion-element">
@@ -445,91 +445,91 @@
             </a>
           </div>
 
-          
+
             <div class="site-state-item site-state-categories">
               <a href="/categories">
                 <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
-          
 
-          
+
+
             <div class="site-state-item site-state-tags">
               <a href="/tags">
                 <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
-          
+
 
         </nav>
 
-        
+
 
         <div class="links-of-author motion-element">
-          
-            
+
+
               <span class="links-of-author-item">
                 <a href="http://weibo.com/achefinil" target="_blank" title="Weibo">
-                  
+
                     <i class="fa fa-fw fa-weibo"></i>
-                  
+
                   Weibo
                 </a>
               </span>
-            
+
               <span class="links-of-author-item">
                 <a href="https://github.com/achefinil" target="_blank" title="GutHub">
-                  
+
                     <i class="fa fa-fw fa-globe"></i>
-                  
+
                   GutHub
                 </a>
               </span>
-            
-          
+
+
         </div>
 
-        
-        
 
-        
-        
+
+
+
+
 
       </section>
 
-      
+
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
-            
-              
-            
-            
+
+
+
+
               <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写一个脚本，记录相关需要信息。（-ssh-ache）存放位置自定"><span class="nav-number">1.</span> <span class="nav-text">写一个脚本，记录相关需要信息。（~/.ssh/ache）存放位置自定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Profiles"><span class="nav-number">2.</span> <span class="nav-text">配置Profiles</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#登录"><span class="nav-number">3.</span> <span class="nav-text">登录</span></a></li></ol></div>
-            
+
           </div>
         </section>
-      
+
 
     </div>
   </aside>
 
 
-        
+
       </div>
     </main>
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright" >
-  
-  &copy; 
+
+  &copy;
   <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">김상</span>
+  <span class="author" itemprop="copyrightHolder">김성</span>
 </div>
 
 <div class="powered-by">
@@ -543,9 +543,9 @@
   </a>
 </div>
 
-        
 
-        
+
+
       </div>
     </footer>
 
@@ -554,7 +554,7 @@
     </div>
   </div>
 
-  
+
 
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
@@ -570,30 +570,30 @@
 
 
 
-  
 
 
 
-  
+
+
   <script type="text/javascript" src="/libs/jquery/index.js?v=2.1.3"></script>
 
-  
+
   <script type="text/javascript" src="/libs/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
-  
+
   <script type="text/javascript" src="/libs/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
-  
+
   <script type="text/javascript" src="/libs/velocity/velocity.min.js?v=1.2.1"></script>
 
-  
+
   <script type="text/javascript" src="/libs/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
-  
+
   <script type="text/javascript" src="/libs/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
+
 
 
   <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
@@ -602,39 +602,39 @@
 
 
 
-  
-  
 
-  
+
+
+
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
 
 
 
-  
+
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
 
 
 
-  
-
-
-
-  
 
 
 
 
-  
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
+
+
+
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
   <script>AV.initialize("Ag21FJC0Ciusr0ESTyn0sdfS-gzGzoHsz", "0HoFjzzBkbr1nv5saraLxbiR");</script>
   <script>
@@ -741,7 +741,7 @@
 
 
 
-  
+
 
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 
 
-  
+
 
 
 <html class="theme-next mist use-motion">
@@ -27,36 +27,36 @@
 
 
 
-  
-  
+
+
   <link href="/libs/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
-  
-  
-  
-  
 
-  
-    
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
+
 
 
 
@@ -122,7 +122,7 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  
+
 
 
 
@@ -143,17 +143,17 @@
 
 
 
-  
-  
-    
-  
+
+
+
+
 
   <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-meta ">
-  
+
 
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
@@ -174,57 +174,57 @@
 </div>
 
 <nav class="site-nav">
-  
 
-  
+
+
     <ul id="menu" class="menu">
-      
-        
+
+
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            
+
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
+
             首页
           </a>
         </li>
-      
-        
+
+
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
-            
+
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
+
             分类
           </a>
         </li>
-      
-        
+
+
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
-            
+
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
+
             归档
           </a>
         </li>
-      
-        
+
+
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
-            
+
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
+
             标签
           </a>
         </li>
-      
 
-      
+
+
     </ul>
-  
 
-  
+
+
 </nav>
 
  </div>
@@ -234,34 +234,34 @@
       <div class="main-inner">
         <div class="content-wrap">
           <div id="content" class="content">
-            
+
 
   <div id="posts" class="posts-expand">
-    
 
-  
-  
 
-  
-  
-  
+
+
+
+
+
+
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
-    
+
       <header class="post-header">
 
-        
-        
+
+
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
+
+
+
                 Git Quick Start
-              
-            
+
+
           </h1>
-        
+
 
         <div class="post-meta">
           <span class="post-time">
@@ -274,35 +274,35 @@
             </time>
           </span>
 
-          
+
             <span class="post-category" >
               &nbsp; | &nbsp;
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
-              
+
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Git/" itemprop="url" rel="index">
                     <span itemprop="name">Git</span>
                   </a>
                 </span>
 
-                
-                
 
-              
+
+
+
             </span>
-          
 
-          
-            
-          
 
-          
 
-          
-          
+
+
+
+
+
+
+
              <span id="/2016/09/13/Git-Quick-Start/" class="leancloud_visitors" data-flag-title="Git Quick Start">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
@@ -311,20 +311,20 @@
                <span class="post-meta-item-text">阅读次数 </span>
                <span class="leancloud-visitors-count"></span>
               </span>
-          
 
-          
+
+
         </div>
       </header>
-    
+
 
 
     <div class="post-body" itemprop="articleBody">
 
-      
-      
 
-      
+
+
+
         <hr>
 <blockquote>
 <p>最近在比较频繁的使用git，摘写了一些git常用的命令。</p>
@@ -341,73 +341,73 @@
 <h2 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h2><p>代码成功合并后，可以删除分支：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除本地分支</span></span><br><span class="line">$ git branch -d fav-list</span><br><span class="line">Deleted branch cartype-list (was 7003eb1).</span><br><span class="line"><span class="comment"># 强制删除：在本地修改未提交时，是不可以删除的，如确定删除分支并放弃所有修改，可以输入$ git branch -D fav-list</span></span><br><span class="line"><span class="comment"># 删除远程分支</span></span><br><span class="line">$ git push origin :fav-list</span><br><span class="line">To git@*****.git</span><br><span class="line"> - [deleted]         fav-list</span><br><span class="line"><span class="comment"># 删除后，查看branch，就只剩下master分支了：</span></span><br><span class="line">$ git branch</span><br><span class="line">* master</span><br></pre></td></tr></table></figure></p>
 <h2 id="取消修改-恢复版本"><a href="#取消修改-恢复版本" class="headerlink" title="取消修改 恢复版本"></a>取消修改 恢复版本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 取消对文件的修改。还原到最近的版本，废弃本地做的修改。</span></span><br><span class="line">git checkout -- &lt;file&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消已经暂存的文件。即，撤销先前"git add"的操作</span></span><br><span class="line">git reset HEAD &lt;file&gt;...</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改最后一次提交。用于修改上一次的提交信息，或漏提交文件等情况。</span></span><br><span class="line">git commit --amend</span><br><span class="line"></span><br><span class="line"><span class="comment"># 回退所有内容到上一个版本</span></span><br><span class="line">git reset HEAD^</span><br><span class="line"></span><br><span class="line"><span class="comment"># 回退a.py这个文件的版本到上一个版本  </span></span><br><span class="line">git reset HEAD^ a.py  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 向前回退到第3个版本  </span></span><br><span class="line">git reset –soft HEAD~3  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 将本地的状态回退到和远程的一样  </span></span><br><span class="line">git reset –hard origin/master  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 回退到某个版本  </span></span><br><span class="line">git reset 057d  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 回退到上一次提交的状态，按照某一次的commit完全反向的进行一次commit.(代码回滚到上个版本，并提交git)</span></span><br><span class="line">git revert HEAD</span><br></pre></td></tr></table></figure>
 <h2 id="切换到远程分支"><a href="#切换到远程分支" class="headerlink" title="切换到远程分支"></a>切换到远程分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看当前所有分支（本地+远程）</span></span><br><span class="line">git branch -va</span><br><span class="line"><span class="comment"># 创建本地分支并切换到远程分支（例：ache为分支名）</span></span><br><span class="line">git checkout -b ache origin/ache</span><br></pre></td></tr></table></figure>
-      
+
     </div>
 
     <div>
-      
-        
 
-      
+
+
+
     </div>
 
     <div>
-      
-        
 
-      
+
+
+
     </div>
 
     <footer class="post-footer">
-      
 
-      
+
+
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-            
+
               <a href="/2016/01/05/navigator-userAgent/" rel="next" title="js判断当前设备内核与类型">
                 <i class="fa fa-chevron-left"></i> js判断当前设备内核与类型
               </a>
-            
+
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
+
               <a href="/2016/09/26/log4js日志多进程造成日志丢失/" rel="prev" title="log4js多进程造成日志丢失">
                 log4js多进程造成日志丢失 <i class="fa fa-chevron-right"></i>
               </a>
-            
+
           </div>
         </div>
-      
 
-      
-      
+
+
+
     </footer>
   </article>
 
 
 
     <div class="post-spread">
-      
+
     </div>
   </div>
 
 
           </div>
-          
 
 
-          
+
+
   <div class="comments" id="comments">
-    
+
   </div>
 
 
         </div>
-        
-          
-  
+
+
+
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
       <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
@@ -419,9 +419,9 @@
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
-      
 
-      
+
+
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
             文章目录
@@ -430,14 +430,14 @@
             站点概览
           </li>
         </ul>
-      
+
 
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/img/avatar.jpg"
-               alt="김상" />
-          <p class="site-author-name" itemprop="name">김상</p>
+               alt="김성" />
+          <p class="site-author-name" itemprop="name">김성</p>
           <p class="site-description motion-element" itemprop="description">지나간 것은 지나간대로</p>
         </div>
         <nav class="site-state motion-element">
@@ -448,91 +448,91 @@
             </a>
           </div>
 
-          
+
             <div class="site-state-item site-state-categories">
               <a href="/categories">
                 <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
-          
 
-          
+
+
             <div class="site-state-item site-state-tags">
               <a href="/tags">
                 <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
-          
+
 
         </nav>
 
-        
+
 
         <div class="links-of-author motion-element">
-          
-            
+
+
               <span class="links-of-author-item">
                 <a href="http://weibo.com/achefinil" target="_blank" title="Weibo">
-                  
+
                     <i class="fa fa-fw fa-weibo"></i>
-                  
+
                   Weibo
                 </a>
               </span>
-            
+
               <span class="links-of-author-item">
                 <a href="https://github.com/achefinil" target="_blank" title="GutHub">
-                  
+
                     <i class="fa fa-fw fa-globe"></i>
-                  
+
                   GutHub
                 </a>
               </span>
-            
-          
+
+
         </div>
 
-        
-        
 
-        
-        
+
+
+
+
 
       </section>
 
-      
+
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
-            
-              
-            
-            
+
+
+
+
               <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">1.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#克隆仓库"><span class="nav-number">2.</span> <span class="nav-text">克隆仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新代码"><span class="nav-number">3.</span> <span class="nav-text">更新代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改代码并提交"><span class="nav-number">4.</span> <span class="nav-text">修改代码并提交</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推送到远程分支"><span class="nav-number">5.</span> <span class="nav-text">推送到远程分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地分支合并"><span class="nav-number">6.</span> <span class="nav-text">本地分支合并</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除分支"><span class="nav-number">7.</span> <span class="nav-text">删除分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#取消修改-恢复版本"><span class="nav-number">8.</span> <span class="nav-text">取消修改 恢复版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切换到远程分支"><span class="nav-number">9.</span> <span class="nav-text">切换到远程分支</span></a></li></ol></div>
-            
+
           </div>
         </section>
-      
+
 
     </div>
   </aside>
 
 
-        
+
       </div>
     </main>
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright" >
-  
-  &copy; 
+
+  &copy;
   <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">김상</span>
+  <span class="author" itemprop="copyrightHolder">김성</span>
 </div>
 
 <div class="powered-by">
@@ -546,9 +546,9 @@
   </a>
 </div>
 
-        
 
-        
+
+
       </div>
     </footer>
 
@@ -557,7 +557,7 @@
     </div>
   </div>
 
-  
+
 
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
@@ -573,30 +573,30 @@
 
 
 
-  
 
 
 
-  
+
+
   <script type="text/javascript" src="/libs/jquery/index.js?v=2.1.3"></script>
 
-  
+
   <script type="text/javascript" src="/libs/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
-  
+
   <script type="text/javascript" src="/libs/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
-  
+
   <script type="text/javascript" src="/libs/velocity/velocity.min.js?v=1.2.1"></script>
 
-  
+
   <script type="text/javascript" src="/libs/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
-  
+
   <script type="text/javascript" src="/libs/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
+
 
 
   <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
@@ -605,39 +605,39 @@
 
 
 
-  
-  
 
-  
+
+
+
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
 
 
 
-  
+
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
 
 
 
-  
-
-
-
-  
 
 
 
 
-  
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
+
+
+
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
   <script>AV.initialize("Ag21FJC0Ciusr0ESTyn0sdfS-gzGzoHsz", "0HoFjzzBkbr1nv5saraLxbiR");</script>
   <script>
@@ -744,7 +744,7 @@
 
 
 
-  
+
 
 </body>
 </html>
