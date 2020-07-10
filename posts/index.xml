@@ -1,20 +1,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on 노트 &amp; 생활</title>
-        <link>https://achefinil.com/posts/</link>
+        <link>/posts/</link>
         <description>Recent content in Posts on 노트 &amp; 생활</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
         <lastBuildDate>Thu, 08 Jun 2017 09:40:42 +0800</lastBuildDate>
-        <atom:link href="https://achefinil.com/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
             <title>Shadowsocks</title>
-            <link>https://achefinil.com/posts/2017/06/shadowsocks/</link>
+            <link>/posts/2017/06/shadowsocks/</link>
             <pubDate>Thu, 08 Jun 2017 09:40:42 +0800</pubDate>
             
-            <guid>https://achefinil.com/posts/2017/06/shadowsocks/</guid>
+            <guid>/posts/2017/06/shadowsocks/</guid>
             <description>注：适用于Debian / Ubuntu系统，其他系统未进行测试。
 安装 安装python-pip
 apt-get install python-pip 如果出现以下问题，执行升级。 pip install --upgrade pip pip install shadowsocks ##安装shadowsocks 如果出现以下问题，先安装 setuptppls 再执行上面的命令安装ss。
@@ -53,10 +53,10 @@ ssserver -c /etc/shadowsocks.json -d stop
         
         <item>
             <title>vim visual block</title>
-            <link>https://achefinil.com/posts/2017/05/vim-visual-block/</link>
+            <link>/posts/2017/05/vim-visual-block/</link>
             <pubDate>Wed, 31 May 2017 09:40:42 +0800</pubDate>
             
-            <guid>https://achefinil.com/posts/2017/05/vim-visual-block/</guid>
+            <guid>/posts/2017/05/vim-visual-block/</guid>
             <description>用注释举例
 多行注释：  进入命令行模式，按ctrl + v进入 visual block模式，然后按j, 或者k选中多行，把需要注释的行标记起来 按大写字母I，再插入注释符，例如// 按esc键就会全部注释了  取消多行注释：  进入命令行模式，按ctrl + v进入 visual block模式，按字母l横向选中列的个数，例如 // 需要选中2列 按字母j，或者k选中注释符号 按d键就可全部取消注释  </description>
             <content type="html"><![CDATA[<p>用注释举例</p>
@@ -77,10 +77,10 @@ ssserver -c /etc/shadowsocks.json -d stop
         
         <item>
             <title>item2 ssh实现自动登录</title>
-            <link>https://achefinil.com/posts/2017/02/item2-ssh%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95/</link>
+            <link>/posts/2017/02/item2-ssh%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95/</link>
             <pubDate>Mon, 06 Feb 2017 09:40:42 +0800</pubDate>
             
-            <guid>https://achefinil.com/posts/2017/02/item2-ssh%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95/</guid>
+            <guid>/posts/2017/02/item2-ssh%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95/</guid>
             <description>Mac 中可以使用 Iterm2 ssh访问远程机器。可以使用它的Profiles这个功能实现自动登录。
 写一个脚本，记录相关需要信息。（~/.ssh/ache）存放位置自定 #!/usr/bin/expect -f set user &amp;lt;用户名&amp;gt; set host &amp;lt;ip地址&amp;gt; set password &amp;lt;密码&amp;gt; set timeout -1 spawn ssh $user@$host expect &amp;quot;*assword:*&amp;quot; send &amp;quot;$password\r&amp;quot; interact expect eof 配置Profiles 打开iterm2， Preferences - Profiles - （+）新建一个。 填写Name与Command（expect ~/.ssh/ache）刚才写的脚本。
 登录 这样就告一段落了。可以使用快捷键（command + o）来选择生效不同的配置。</description>
@@ -106,10 +106,10 @@ ssserver -c /etc/shadowsocks.json -d stop
         
         <item>
             <title>Linux中使用mysql</title>
-            <link>https://achefinil.com/posts/2017/01/linux%E4%B8%AD%E4%BD%BF%E7%94%A8mysql/</link>
+            <link>/posts/2017/01/linux%E4%B8%AD%E4%BD%BF%E7%94%A8mysql/</link>
             <pubDate>Tue, 24 Jan 2017 09:40:42 +0800</pubDate>
             
-            <guid>https://achefinil.com/posts/2017/01/linux%E4%B8%AD%E4%BD%BF%E7%94%A8mysql/</guid>
+            <guid>/posts/2017/01/linux%E4%B8%AD%E4%BD%BF%E7%94%A8mysql/</guid>
             <description>新年第一更。在node中连接了mysql，记录一下。
 使用yum安装 $ yum install mysql mysql-server mysql-devel -y 查看是否生成了mysqld服务 $ chkconfig --list |grep mysql 设置随机启动 $ chkconfig mysqld on 启动／停止／重启mysqld服务 ##启动：这两种方法都可以，执行一个就可以 $ /etc/init.d/mysqld start $ service mysqld start ##停止：这两种方法都可以，执行一个就可以 $ /etc/init.d/mysqld stop $ service mysqld stop ##重启：这两种方法都可以，执行一个就可以 $ /etc/init.d/mysqld restart $ service mysqld restart 启动后，ps一下，看下进程是否起来 $ ps -ef |grep mysql|grep -v grep 查看都有哪些库 $ cd /var/lib/mysql $ ls -l 设置初始密码\权限 ##设置新的密码并同时授权限 $ mysql&amp;gt; grant all on *.* to root@&#39;%&#39; identified by &#39;youpassword&#39;; ##刷新使之生效 $ mysql&amp;gt; flush privileges; ##退出 $ mysql&amp;gt; exit; 登录mysql $ mysql -u root -p </description>
             <content type="html"><![CDATA[<p><strong>新年第一更。在node中连接了mysql，记录一下。</strong></p>
@@ -148,10 +148,10 @@ $ mysql&gt; exit;
         
         <item>
             <title>node.js 版本控制 - n</title>
-            <link>https://achefinil.com/posts/2016/12/node.js-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6-n/</link>
+            <link>/posts/2016/12/node.js-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6-n/</link>
             <pubDate>Wed, 14 Dec 2016 09:40:42 +0800</pubDate>
             
-            <guid>https://achefinil.com/posts/2016/12/node.js-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6-n/</guid>
+            <guid>/posts/2016/12/node.js-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6-n/</guid>
             <description>PM2 是一个带有负载均衡功能的 Node 应用的进程管理器。
 当你要把你的独立代码利用全部的服务器上的所有 CPU，并保证进程永远都活着，0 秒的重载。
 主要特性  内建负载均衡（使用 Node cluster 集群模块） 后台运行 0 秒停机重载，我理解大概意思是维护升级的时候不需要停机. 具有 Ubuntu 和 CentOS 的启动脚本 停止不稳定的进程（避免无限循环） 控制台检测 提供 HTTP API 远程控制和实时的接口 API ( Nodejs 模块，允许和 PM2 进程管理器交互 )  安装 npm install -g pm2 使用 $ npm install pm2 -g # 命令行安装 pm2 $ pm2 start app.js -i 4 # 后台运行pm2，启动4个app.js $ pm2 start app.js --name my-api # 命名进程 $ pm2 list # 显示所有进程状态 $ pm2 monit # 监视所有进程 $ pm2 logs # 显示所有进程日志 $ pm2 stop all # 停止所有进程 $ pm2 restart all # 重启所有进程 $ pm2 reload all # 0 秒停机重载进程 (用于 NETWORKED 进程) $ pm2 stop 0 # 停止指定的进程 $ pm2 restart 0 # 重启指定的进程 $ pm2 startup # 产生 init 脚本 保持进程活着 $ pm2 web # 运行健壮的 computer API endpoint (http://localhost:9615) $ pm2 delete 0 # 杀死指定的进程 $ pm2 delete all # 杀死全部进程 </description>
@@ -191,10 +191,10 @@ $ pm2 delete all         # 杀死全部进程
         
         <item>
             <title>PM2</title>
-            <link>https://achefinil.com/posts/2016/12/pm2/</link>
+            <link>/posts/2016/12/pm2/</link>
             <pubDate>Wed, 14 Dec 2016 09:40:42 +0800</pubDate>
             
-            <guid>https://achefinil.com/posts/2016/12/pm2/</guid>
+            <guid>/posts/2016/12/pm2/</guid>
             <description>PM2 是一个带有负载均衡功能的 Node 应用的进程管理器。
 当你要把你的独立代码利用全部的服务器上的所有 CPU，并保证进程永远都活着，0 秒的重载。
 主要特性  内建负载均衡（使用 Node cluster 集群模块） 后台运行 0 秒停机重载，我理解大概意思是维护升级的时候不需要停机. 具有 Ubuntu 和 CentOS 的启动脚本 停止不稳定的进程（避免无限循环） 控制台检测 提供 HTTP API 远程控制和实时的接口 API ( Nodejs 模块，允许和 PM2 进程管理器交互 )  安装 npm install -g pm2 使用 $ npm install pm2 -g # 命令行安装 pm2 $ pm2 start app.js -i 4 # 后台运行pm2，启动4个app.js $ pm2 start app.js --name my-api # 命名进程 $ pm2 list # 显示所有进程状态 $ pm2 monit # 监视所有进程 $ pm2 logs # 显示所有进程日志 $ pm2 stop all # 停止所有进程 $ pm2 restart all # 重启所有进程 $ pm2 reload all # 0 秒停机重载进程 (用于 NETWORKED 进程) $ pm2 stop 0 # 停止指定的进程 $ pm2 restart 0 # 重启指定的进程 $ pm2 startup # 产生 init 脚本 保持进程活着 $ pm2 web # 运行健壮的 computer API endpoint (http://localhost:9615) $ pm2 delete 0 # 杀死指定的进程 $ pm2 delete all # 杀死全部进程 </description>
@@ -234,10 +234,10 @@ $ pm2 delete all         # 杀死全部进程
         
         <item>
             <title>Mac 解决端口占用</title>
-            <link>https://achefinil.com/posts/2016/11/mac-%E8%A7%A3%E5%86%B3%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/</link>
+            <link>/posts/2016/11/mac-%E8%A7%A3%E5%86%B3%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/</link>
             <pubDate>Thu, 17 Nov 2016 09:40:42 +0800</pubDate>
             
-            <guid>https://achefinil.com/posts/2016/11/mac-%E8%A7%A3%E5%86%B3%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/</guid>
+            <guid>/posts/2016/11/mac-%E8%A7%A3%E5%86%B3%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/</guid>
             <description>Tomcat启动时报以下错误 java.rmi.server.ExportException: Port already in use: 1099; nested exception is: java.net.BindException: Address already in use 查看占用该端口的进程 lsof -i tcp:1099 显示如下列表 COMMAND PID USER FD TYPE DEVICE SIZE/OFF NODE NAME java 1376 achefinil 20u IPv6 0xbf8ce0cb4c234839 0t0 TCP 直接kill掉 kill -9 1099 </description>
             <content type="html"><![CDATA[<h2 id="tomcat启动时报以下错误">Tomcat启动时报以下错误</h2>
 <pre><code>java.rmi.server.ExportException: Port already in use: 1099; nested exception is: 
@@ -254,10 +254,10 @@ java.net.BindException: Address already in use
         
         <item>
             <title>Mac nginx 相关命令</title>
-            <link>https://achefinil.com/posts/2016/11/mac-nginx-%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/</link>
+            <link>/posts/2016/11/mac-nginx-%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/</link>
             <pubDate>Tue, 15 Nov 2016 09:40:42 +0800</pubDate>
             
-            <guid>https://achefinil.com/posts/2016/11/mac-nginx-%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/</guid>
+            <guid>/posts/2016/11/mac-nginx-%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/</guid>
             <description>各个系统下的nginx的相关命令类似，就OS下使用。（注意如果权限不足需要在下述命令前输入 “sudo”）。
 停止操作（两个步骤）  查询nginx主进程号  ps -ef | grep nginx  停止命令（3种，酌情使用）  ## 从容停止 kill -QUIT 主进程号 ## 快速停止 kill -TERM 主进程号 ## 强制停止 kill -9 主进程号 平滑重启  如果更改了配置，并不需要总是关闭再打开。同样要先拿到主进程号，同上第一步骤。  ## 后面是主进称号或进程号文件路径 kill -HUP 主进程号  另外推荐的重载配置的方式  /usr/local/nginx/sbin/nginx -s reload  如果修改了配置文件后最好先检查一下修改过的配置文件是否正确  nginx -t -c config文件路径 </description>
             <content type="html"><![CDATA[<p>各个系统下的nginx的相关命令类似，就OS下使用。（注意如果权限不足需要在下述命令前输入 “sudo”）。</p>
@@ -294,10 +294,10 @@ kill -HUP 主进程号
         
         <item>
             <title>Git无密码操作 添加SSHKey</title>
-            <link>https://achefinil.com/posts/2016/11/git%E6%97%A0%E5%AF%86%E7%A0%81%E6%93%8D%E4%BD%9C-%E6%B7%BB%E5%8A%A0sshkey/</link>
+            <link>/posts/2016/11/git%E6%97%A0%E5%AF%86%E7%A0%81%E6%93%8D%E4%BD%9C-%E6%B7%BB%E5%8A%A0sshkey/</link>
             <pubDate>Thu, 10 Nov 2016 09:40:42 +0800</pubDate>
             
-            <guid>https://achefinil.com/posts/2016/11/git%E6%97%A0%E5%AF%86%E7%A0%81%E6%93%8D%E4%BD%9C-%E6%B7%BB%E5%8A%A0sshkey/</guid>
+            <guid>/posts/2016/11/git%E6%97%A0%E5%AF%86%E7%A0%81%E6%93%8D%E4%BD%9C-%E6%B7%BB%E5%8A%A0sshkey/</guid>
             <description>Git仓库之间的代码传输协议主要使用ssh协议。而一般搭建Gitlab的时候使用的git用户是没有密码的，因此直接ssh是不能登录的，就需要使用ssh-keygen上传公钥，使用非对称加密传输。下面讲述如何上传你的ssh公钥：
  &amp;ndash; 在Terminal / git Bash中敲下面的命令：
 ## 生成密钥，一路回车即可（如果需要重新生成注意一下） ssh-keygen -t rsa ## 显示刚才生成的公钥内容，自行拷贝到Gitlab cat ~/.ssh/id_rsa.pub 最后粘贴到账户的ssh配置处。</description>
@@ -315,10 +315,10 @@ cat ~/.ssh/id_rsa.pub
         
         <item>
             <title>Mac Finder 显示隐藏文件和文件夹</title>
-            <link>https://achefinil.com/posts/2016/09/mac-finder-%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%E5%92%8C%E6%96%87%E4%BB%B6%E5%A4%B9/</link>
+            <link>/posts/2016/09/mac-finder-%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%E5%92%8C%E6%96%87%E4%BB%B6%E5%A4%B9/</link>
             <pubDate>Tue, 27 Sep 2016 09:40:42 +0800</pubDate>
             
-            <guid>https://achefinil.com/posts/2016/09/mac-finder-%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%E5%92%8C%E6%96%87%E4%BB%B6%E5%A4%B9/</guid>
+            <guid>/posts/2016/09/mac-finder-%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%E5%92%8C%E6%96%87%E4%BB%B6%E5%A4%B9/</guid>
             <description>最近Mac上使用一些命令 总有一些记不住的 记录一下 以下命令 需在「终端 Terminal」中执行
  显示隐藏文件
  defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder  隐藏文件
@@ -339,10 +339,10 @@ cat ~/.ssh/id_rsa.pub
         
         <item>
             <title>Git Quick Start</title>
-            <link>https://achefinil.com/posts/2016/09/git-quick-start/</link>
+            <link>/posts/2016/09/git-quick-start/</link>
             <pubDate>Tue, 13 Sep 2016 09:40:42 +0800</pubDate>
             
-            <guid>https://achefinil.com/posts/2016/09/git-quick-start/</guid>
+            <guid>/posts/2016/09/git-quick-start/</guid>
             <description>配置 常用配置：
 # 配置全局用户名、邮箱，主要用于 commit 身份信息 $ git config --global user.name &amp;quot;achefinil&amp;quot; $ git config --global user.email &amp;quot;hi@achefinil.com&amp;quot; # 配置缩写，强烈推荐，之后就不必敲那么多字符了 $ git config --global alias.br branch $ git config --global alias.co checkout $ git config --global alias.ci commit 可以通过如下命令确认配置是否生效：
 $ git config --list alias.br=branch alias.co=checkout alias.ci=commit $ git config user.name 一些可能有用的配置：
@@ -472,10 +472,10 @@ git checkout -b ache origin/ache
         
         <item>
             <title>js判断当前设备内核与类型</title>
-            <link>https://achefinil.com/posts/2016/01/js%E5%88%A4%E6%96%AD%E5%BD%93%E5%89%8D%E8%AE%BE%E5%A4%87%E5%86%85%E6%A0%B8%E4%B8%8E%E7%B1%BB%E5%9E%8B/</link>
+            <link>/posts/2016/01/js%E5%88%A4%E6%96%AD%E5%BD%93%E5%89%8D%E8%AE%BE%E5%A4%87%E5%86%85%E6%A0%B8%E4%B8%8E%E7%B1%BB%E5%9E%8B/</link>
             <pubDate>Tue, 05 Jan 2016 09:40:42 +0800</pubDate>
             
-            <guid>https://achefinil.com/posts/2016/01/js%E5%88%A4%E6%96%AD%E5%BD%93%E5%89%8D%E8%AE%BE%E5%A4%87%E5%86%85%E6%A0%B8%E4%B8%8E%E7%B1%BB%E5%9E%8B/</guid>
+            <guid>/posts/2016/01/js%E5%88%A4%E6%96%AD%E5%BD%93%E5%89%8D%E8%AE%BE%E5%A4%87%E5%86%85%E6%A0%B8%E4%B8%8E%E7%B1%BB%E5%9E%8B/</guid>
             <description>创建对象，使用indexOf判断并返回 //判断访问终端 var browser={ versions:function(){ var u = navigator.userAgent, app = navigator.appVersion; return { trident: u.indexOf(&amp;#39;Trident&amp;#39;) &amp;gt; -1, //IE内核  presto: u.indexOf(&amp;#39;Presto&amp;#39;) &amp;gt; -1, //opera内核  webKit: u.indexOf(&amp;#39;AppleWebKit&amp;#39;) &amp;gt; -1, //苹果、谷歌内核  gecko: u.indexOf(&amp;#39;Gecko&amp;#39;) &amp;gt; -1 &amp;amp;&amp;amp; u.indexOf(&amp;#39;KHTML&amp;#39;) == -1,//火狐内核  mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端  ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端  android: u.indexOf(&amp;#39;Android&amp;#39;) &amp;gt; -1 || u.indexOf(&amp;#39;Linux&amp;#39;) &amp;gt; -1, //android终端或者uc浏览器  iPhone: u.indexOf(&amp;#39;iPhone&amp;#39;) &amp;gt; -1 , //是否为iPhone或者QQHD浏览器  iPad: u.</description>
             <content type="html"><![CDATA[<h2 id="创建对象使用indexof判断并返回">创建对象，使用indexOf判断并返回</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//判断访问终端
@@ -521,10 +521,10 @@ git checkout -b ache origin/ache
         
         <item>
             <title>gulp.js 简单配置</title>
-            <link>https://achefinil.com/posts/2016/01/gulp.js-%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</link>
+            <link>/posts/2016/01/gulp.js-%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</link>
             <pubDate>Mon, 04 Jan 2016 09:40:42 +0800</pubDate>
             
-            <guid>https://achefinil.com/posts/2016/01/gulp.js-%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</guid>
+            <guid>/posts/2016/01/gulp.js-%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</guid>
             <description>gulp.js是一个前端开发中对前端代码构建的工具，是自动化的构建利器。 基于node.js gulp官方网址：http://gulpjs.com http://www.gulpjs.com.cn/  安装nodejs  gulp是基于nodejs，理所当然需要安装nodejs； 安装：打开nodejs官网，点击硕大的绿色Download按钮，它会根据系统信息选择对应版本（.msi文件）。然后像安装QQ一样安装它就可以了（安装路径随意）。  npm  说明：npm（node package manager）nodejs的包管理器，用于node插件管理（包括安装、卸载、管理依赖等）； 使用npm安装插件：命令提示符执行npm install [-g] [–save-dev]； node插件名称。例：npm install gulp-less –save-dev -g：全局安装。将会安装在C:\Users\Administrator\AppData\Roaming\npm，并且写入系统环境变量； 非全局安装：将会安装在当前定位目录； 全局安装可以通过命令行在任何地方调用它，本地安装将安装在定位目录的node_modules文件夹下，通过require()调用； –save：将保存配置信息至package.json（package.json是nodejs项目配置文件）； dev：保存至package.json的devDependencies节点，不指定-dev将保存至dependencies节点； install，则会根据package.json下载所有需要的包）。 使用npm卸载插件：npm uninstall [-g] [–save-dev] PS：不要直接删除本地插件包 使用npm更新插件：npm update [-g] [–save-dev] 查看npm帮助：npm help 当前目录已安装插件：npm list  安装 gulp  #全局安装
 $ npm install gulp -g
 #切到工作目录初始化项目，并填写相关项目信息。之后会在目录中生成一个package.json的文件。
@@ -642,10 +642,10 @@ $ npm install gulp &ndash;save-dev</p>
         
         <item>
             <title>If You</title>
-            <link>https://achefinil.com/posts/2015/10/if-you/</link>
+            <link>/posts/2015/10/if-you/</link>
             <pubDate>Thu, 29 Oct 2015 09:40:42 +0800</pubDate>
             
-            <guid>https://achefinil.com/posts/2015/10/if-you/</guid>
+            <guid>/posts/2015/10/if-you/</guid>
             <description>歌词有些负面 听起来还是很享受的 BIGBANG 那个可能有版权控制 暂时不能听到 推荐在购买听 可以先听听韩国国民妹妹翻唱版本
 그녀가 떠나가요 她离开了 나는 아무것도 할 수 없어요 我什么也做不了 사랑이 떠나가요 爱情离开了 나는 바보처럼 멍하니 서 있네요 我还像傻瓜一样地站着 멀어지는 그 뒷모습만을 바라보다 望着渐行渐远的那个背影 작은 점이 되어 사라진다 化成小小的一个点 消失不见 시간이 지나면 또 무뎌질까 随着时间流逝 是否会逐渐麻木 옛 생각이 나 想起往事 니 생각이 나 想起了你 IF YOU IF YOU 아직 너무 늦지 않았다면 如果还没有太迟 우리 다시 돌아갈 수는 없을까 我们是否能重新回去 IF YOU IF YOU 너도 나와 같이 힘들다면 如果你也和我一样难过 우리 조금 쉽게 갈 수는 없을까 我们能不能走的轻松一点 있을 때 잘할 걸 그랬어 在一起时 本来应该好好对你 그대는 어떤가요 你怎么样呢 정말 아무렇지 않은 건가요 真的无所谓吗 이별이 지나봐요 试着经历离别 그댈 잊어야 하지만 쉽지가 않네요 必须要忘记你 但是并不容易 멀어지는 그 뒷모습만을 바라보다 望着渐行渐远的那个背影 작은 점이 되어 사라진다 化成小小的一个点 消失不见 누군갈 만나면 위로가 될까 如果和谁见面 是否能得到安慰 옛 생각이 나 想起往事 니 생각이 나 想起了你 IF YOU IF YOU 아직 너무 늦지 않았다면 如果还没有太迟 우리 다시 돌아갈 수는 없을까 我们是否能重新回去 IF YOU IF YOU 너도 나와 같이 힘들다면 如果你也和我一样难过 우리 조금 쉽게 갈 수는 없을까 我们能不能走的轻松一点 있을 때 잘할 걸 그랬어 在一起时 本来应该好好对你 오늘같이 가녀린 비가 내리는 날이면 像今天这种蒙蒙细雨的日子 너의 그림자가 떠오르고 就会浮想起你的影子 서랍 속에 몰래 넣어둔 把悄悄放在抽屉里的 우리의 추억을 我们的回忆 다시 꺼내 홀로 회상하고 重新取出来 独自回想 헤어짐이란 슬픔의 무게를 分手的悲伤的重量 난 왜 몰랐을까 当时我为什么不懂呢 IF YOU IF YOU IF YOU IF YOU 아직 너무 늦지 않았다면 如果还没有太迟 우리 다시 돌아갈 수는 없을까 我们是否能重新回去 IF YOU IF YOU IF YOU IF YOU 너도 나와 같이 힘들다면 如果你也和我一样难过 우리 조금 쉽게 갈 수는 없을까 我们能不能走的轻松一点 있을 때 잘할 걸 그랬어 在一起时 本来应该好好对你 </description>
             <content type="html"><![CDATA[<p>歌词有些负面 听起来还是很享受的
@@ -752,10 +752,10 @@ IF YOU
         
         <item>
             <title>js-Ajax</title>
-            <link>https://achefinil.com/posts/2015/10/js-ajax/</link>
+            <link>/posts/2015/10/js-ajax/</link>
             <pubDate>Mon, 26 Oct 2015 09:40:42 +0800</pubDate>
             
-            <guid>https://achefinil.com/posts/2015/10/js-ajax/</guid>
+            <guid>/posts/2015/10/js-ajax/</guid>
             <description>最近为了减少页面加载文件大小，省去了jQuery包。直接使用原生js码了Ajax。
  /** * @函数说明 Ajax封装 * @修改历史 * 2015-09-18 Achefinil 重写ajax */ function AjaxClass(){ var XmlHttp = false; try { XmlHttp = new XMLHttpRequest();//FireFox专有 } catch(e) { try { XmlHttp = new ActiveXObject(&amp;quot;MSXML2.XMLHTTP&amp;quot;); } catch(e2) { try { XmlHttp = new ActiveXObject(&amp;quot;Microsoft.XMLHTTP&amp;quot;); } catch(e3) { showMsg(&amp;quot;请使用现代浏览器&amp;quot;); XmlHttp = false; } } } var me = this; this.Method = &amp;quot;POST&amp;quot;; this.Url = &amp;quot;&amp;quot;; this.Async = true; this.param = &amp;quot;&amp;quot;; this.</description>
             <content type="html"><![CDATA[<blockquote>
@@ -863,10 +863,10 @@ Ajax.Send();
         
         <item>
             <title>20150924</title>
-            <link>https://achefinil.com/posts/2015/09/20150924/</link>
+            <link>/posts/2015/09/20150924/</link>
             <pubDate>Thu, 24 Sep 2015 09:40:42 +0800</pubDate>
             
-            <guid>https://achefinil.com/posts/2015/09/20150924/</guid>
+            <guid>/posts/2015/09/20150924/</guid>
             <description>&lt;p&gt;折腾了许久
 最后还是决定开个博客记录下成长&lt;/p&gt;</description>
             <content type="html"><![CDATA[<p>折腾了许久
