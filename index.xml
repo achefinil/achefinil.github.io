@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>노트 &amp; 생활</title>
+    <link>https://example.com/</link>
+    <description>Recent content on 노트 &amp; 생활</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Thu, 08 Jun 2017 09:40:42 +0800</lastBuildDate>
+    
+	<atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Creating a New Theme</title>
+      <link>https://example.com/post/creating-a-new-theme/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/creating-a-new-theme/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>https://example.com/post/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/migrate-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>Shadowsocks</title>
+      <link>https://example.com/posts/2017/06/shadowsocks/</link>
+      <pubDate>Thu, 08 Jun 2017 09:40:42 +0800</pubDate>
+      
+      <guid>https://example.com/posts/2017/06/shadowsocks/</guid>
+      <description>注：适用于Debian / Ubuntu系统，其他系统未进行测试。
+安装 安装python-pip
+apt-get install python-pip 如果出现以下问题，执行升级。 pip install --upgrade pip pip install shadowsocks ##安装shadowsocks 如果出现以下问题，先安装 setuptppls 再执行上面的命令安装ss。
+pip install setuptools 配置 创建json配置文件：/etc/shadowsocks.json. Example:
+{ &amp;quot;server&amp;quot;:&amp;quot;my_server_ip&amp;quot;, &amp;quot;server_port&amp;quot;:8388, &amp;quot;local_address&amp;quot;: &amp;quot;127.0.0.1&amp;quot;, &amp;quot;local_port&amp;quot;:1080, &amp;quot;password&amp;quot;:&amp;quot;mypassword&amp;quot;, &amp;quot;timeout&amp;quot;:300, &amp;quot;method&amp;quot;:&amp;quot;aes-256-cfb&amp;quot;, &amp;quot;fast_open&amp;quot;: false } 启动与停止 To run in the background:
+ssserver -c /etc/shadowsocks.json -d start ssserver -c /etc/shadowsocks.json -d stop </description>
+    </item>
+    
+    <item>
+      <title>vim visual block</title>
+      <link>https://example.com/posts/2017/05/vim-visual-block/</link>
+      <pubDate>Wed, 31 May 2017 09:40:42 +0800</pubDate>
+      
+      <guid>https://example.com/posts/2017/05/vim-visual-block/</guid>
+      <description>用注释举例
+多行注释：  进入命令行模式，按ctrl + v进入 visual block模式，然后按j, 或者k选中多行，把需要注释的行标记起来 按大写字母I，再插入注释符，例如// 按esc键就会全部注释了  取消多行注释：  进入命令行模式，按ctrl + v进入 visual block模式，按字母l横向选中列的个数，例如 // 需要选中2列 按字母j，或者k选中注释符号 按d键就可全部取消注释  </description>
+    </item>
+    
+    <item>
+      <title>item2 ssh实现自动登录</title>
+      <link>https://example.com/posts/2017/02/item2-ssh%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95/</link>
+      <pubDate>Mon, 06 Feb 2017 09:40:42 +0800</pubDate>
+      
+      <guid>https://example.com/posts/2017/02/item2-ssh%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95/</guid>
+      <description>Mac 中可以使用 Iterm2 ssh访问远程机器。可以使用它的Profiles这个功能实现自动登录。
+写一个脚本，记录相关需要信息。（~/.ssh/ache）存放位置自定 #!/usr/bin/expect -f set user &amp;lt;用户名&amp;gt; set host &amp;lt;ip地址&amp;gt; set password &amp;lt;密码&amp;gt; set timeout -1 spawn ssh $user@$host expect &amp;quot;*assword:*&amp;quot; send &amp;quot;$password\r&amp;quot; interact expect eof 配置Profiles 打开iterm2， Preferences - Profiles - （+）新建一个。 填写Name与Command（expect ~/.ssh/ache）刚才写的脚本。
+登录 这样就告一段落了。可以使用快捷键（command + o）来选择生效不同的配置。</description>
+    </item>
+    
+    <item>
+      <title>Linux中使用mysql</title>
+      <link>https://example.com/posts/2017/01/linux%E4%B8%AD%E4%BD%BF%E7%94%A8mysql/</link>
+      <pubDate>Tue, 24 Jan 2017 09:40:42 +0800</pubDate>
+      
+      <guid>https://example.com/posts/2017/01/linux%E4%B8%AD%E4%BD%BF%E7%94%A8mysql/</guid>
+      <description>新年第一更。在node中连接了mysql，记录一下。
+使用yum安装 $ yum install mysql mysql-server mysql-devel -y 查看是否生成了mysqld服务 $ chkconfig --list |grep mysql 设置随机启动 $ chkconfig mysqld on 启动／停止／重启mysqld服务 ##启动：这两种方法都可以，执行一个就可以 $ /etc/init.d/mysqld start $ service mysqld start ##停止：这两种方法都可以，执行一个就可以 $ /etc/init.d/mysqld stop $ service mysqld stop ##重启：这两种方法都可以，执行一个就可以 $ /etc/init.d/mysqld restart $ service mysqld restart 启动后，ps一下，看下进程是否起来 $ ps -ef |grep mysql|grep -v grep 查看都有哪些库 $ cd /var/lib/mysql $ ls -l 设置初始密码\权限 ##设置新的密码并同时授权限 $ mysql&amp;gt; grant all on *.* to root@&#39;%&#39; identified by &#39;youpassword&#39;; ##刷新使之生效 $ mysql&amp;gt; flush privileges; ##退出 $ mysql&amp;gt; exit; 登录mysql $ mysql -u root -p </description>
+    </item>
+    
+    <item>
+      <title>node.js 版本控制 - n</title>
+      <link>https://example.com/posts/2016/12/node.js-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6-n/</link>
+      <pubDate>Wed, 14 Dec 2016 09:40:42 +0800</pubDate>
+      
+      <guid>https://example.com/posts/2016/12/node.js-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6-n/</guid>
+      <description>PM2 是一个带有负载均衡功能的 Node 应用的进程管理器。
+当你要把你的独立代码利用全部的服务器上的所有 CPU，并保证进程永远都活着，0 秒的重载。
+主要特性  内建负载均衡（使用 Node cluster 集群模块） 后台运行 0 秒停机重载，我理解大概意思是维护升级的时候不需要停机. 具有 Ubuntu 和 CentOS 的启动脚本 停止不稳定的进程（避免无限循环） 控制台检测 提供 HTTP API 远程控制和实时的接口 API ( Nodejs 模块，允许和 PM2 进程管理器交互 )  安装 npm install -g pm2 使用 $ npm install pm2 -g # 命令行安装 pm2 $ pm2 start app.js -i 4 # 后台运行pm2，启动4个app.js $ pm2 start app.js --name my-api # 命名进程 $ pm2 list # 显示所有进程状态 $ pm2 monit # 监视所有进程 $ pm2 logs # 显示所有进程日志 $ pm2 stop all # 停止所有进程 $ pm2 restart all # 重启所有进程 $ pm2 reload all # 0 秒停机重载进程 (用于 NETWORKED 进程) $ pm2 stop 0 # 停止指定的进程 $ pm2 restart 0 # 重启指定的进程 $ pm2 startup # 产生 init 脚本 保持进程活着 $ pm2 web # 运行健壮的 computer API endpoint (http://localhost:9615) $ pm2 delete 0 # 杀死指定的进程 $ pm2 delete all # 杀死全部进程 </description>
+    </item>
+    
+    <item>
+      <title>PM2</title>
+      <link>https://example.com/posts/2016/12/pm2/</link>
+      <pubDate>Wed, 14 Dec 2016 09:40:42 +0800</pubDate>
+      
+      <guid>https://example.com/posts/2016/12/pm2/</guid>
+      <description>PM2 是一个带有负载均衡功能的 Node 应用的进程管理器。
+当你要把你的独立代码利用全部的服务器上的所有 CPU，并保证进程永远都活着，0 秒的重载。
+主要特性  内建负载均衡（使用 Node cluster 集群模块） 后台运行 0 秒停机重载，我理解大概意思是维护升级的时候不需要停机. 具有 Ubuntu 和 CentOS 的启动脚本 停止不稳定的进程（避免无限循环） 控制台检测 提供 HTTP API 远程控制和实时的接口 API ( Nodejs 模块，允许和 PM2 进程管理器交互 )  安装 npm install -g pm2 使用 $ npm install pm2 -g # 命令行安装 pm2 $ pm2 start app.js -i 4 # 后台运行pm2，启动4个app.js $ pm2 start app.js --name my-api # 命名进程 $ pm2 list # 显示所有进程状态 $ pm2 monit # 监视所有进程 $ pm2 logs # 显示所有进程日志 $ pm2 stop all # 停止所有进程 $ pm2 restart all # 重启所有进程 $ pm2 reload all # 0 秒停机重载进程 (用于 NETWORKED 进程) $ pm2 stop 0 # 停止指定的进程 $ pm2 restart 0 # 重启指定的进程 $ pm2 startup # 产生 init 脚本 保持进程活着 $ pm2 web # 运行健壮的 computer API endpoint (http://localhost:9615) $ pm2 delete 0 # 杀死指定的进程 $ pm2 delete all # 杀死全部进程 </description>
+    </item>
+    
+    <item>
+      <title>Mac 解决端口占用</title>
+      <link>https://example.com/posts/2016/11/mac-%E8%A7%A3%E5%86%B3%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/</link>
+      <pubDate>Thu, 17 Nov 2016 09:40:42 +0800</pubDate>
+      
+      <guid>https://example.com/posts/2016/11/mac-%E8%A7%A3%E5%86%B3%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/</guid>
+      <description>Tomcat启动时报以下错误 java.rmi.server.ExportException: Port already in use: 1099; nested exception is: java.net.BindException: Address already in use 查看占用该端口的进程 lsof -i tcp:1099 显示如下列表 COMMAND PID USER FD TYPE DEVICE SIZE/OFF NODE NAME java 1376 achefinil 20u IPv6 0xbf8ce0cb4c234839 0t0 TCP 直接kill掉 kill -9 1099 </description>
+    </item>
+    
+    <item>
+      <title>Mac nginx 相关命令</title>
+      <link>https://example.com/posts/2016/11/mac-nginx-%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Tue, 15 Nov 2016 09:40:42 +0800</pubDate>
+      
+      <guid>https://example.com/posts/2016/11/mac-nginx-%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/</guid>
+      <description>各个系统下的nginx的相关命令类似，就OS下使用。（注意如果权限不足需要在下述命令前输入 “sudo”）。
+停止操作（两个步骤）  查询nginx主进程号  ps -ef | grep nginx  停止命令（3种，酌情使用）  ## 从容停止 kill -QUIT 主进程号 ## 快速停止 kill -TERM 主进程号 ## 强制停止 kill -9 主进程号 平滑重启  如果更改了配置，并不需要总是关闭再打开。同样要先拿到主进程号，同上第一步骤。  ## 后面是主进称号或进程号文件路径 kill -HUP 主进程号  另外推荐的重载配置的方式  /usr/local/nginx/sbin/nginx -s reload  如果修改了配置文件后最好先检查一下修改过的配置文件是否正确  nginx -t -c config文件路径 </description>
+    </item>
+    
+  </channel>
+</rss>

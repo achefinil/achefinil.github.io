@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Kim Seong ">
+<meta name="description" content="Git仓库之间的代码传输协议主要使用ssh协议。而一般搭建Gitlab的时候使用的git用户是没有密码的，因此直接ssh是不能登录的，就需要使用ssh-keygen上传公钥，使用非对称加密传输。下面讲述如何上传你的ssh公钥：
+ &amp;ndash; 在Terminal / git Bash中敲下面的命令：
+## 生成密钥，一路回车即可（如果需要重新生成注意一下） ssh-keygen -t rsa ## 显示刚才生成的公钥内容，自行拷贝到Gitlab cat ~/.ssh/id_rsa.pub 最后粘贴到账户的ssh配置处。" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="#252627" />
+<link rel="canonical" href="https://example.com/posts/2016/11/git%E6%97%A0%E5%AF%86%E7%A0%81%E6%93%8D%E4%BD%9C-%E6%B7%BB%E5%8A%A0sshkey/" />
+
+
+    <title>
+        
+            Git无密码操作 添加SSHKey :: 노트 &amp; 생활 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://example.com/main.8ae98aea603ea87ebf368ca924fe2792479c01b94e23c3466fa4b8d86e14dcd2.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://example.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://example.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://example.com/favicon-16x16.png">
+    <link rel="manifest" href="https://example.com/site.webmanifest">
+    <link rel="mask-icon" href="https://example.com/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="https://example.com/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="Git无密码操作 添加SSHKey">
+<meta itemprop="description" content="Git仓库之间的代码传输协议主要使用ssh协议。而一般搭建Gitlab的时候使用的git用户是没有密码的，因此直接ssh是不能登录的，就需要使用ssh-keygen上传公钥，使用非对称加密传输。下面讲述如何上传你的ssh公钥：
+ &ndash; 在Terminal / git Bash中敲下面的命令：
+## 生成密钥，一路回车即可（如果需要重新生成注意一下） ssh-keygen -t rsa ## 显示刚才生成的公钥内容，自行拷贝到Gitlab cat ~/.ssh/id_rsa.pub 最后粘贴到账户的ssh配置处。">
+<meta itemprop="datePublished" content="2016-11-10T09:40:42&#43;08:00" />
+<meta itemprop="dateModified" content="2016-11-10T09:40:42&#43;08:00" />
+<meta itemprop="wordCount" content="16">
+<meta itemprop="image" content="https://example.com"/>
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://example.com"/>
+
+<meta name="twitter:title" content="Git无密码操作 添加SSHKey"/>
+<meta name="twitter:description" content="Git仓库之间的代码传输协议主要使用ssh协议。而一般搭建Gitlab的时候使用的git用户是没有密码的，因此直接ssh是不能登录的，就需要使用ssh-keygen上传公钥，使用非对称加密传输。下面讲述如何上传你的ssh公钥：
+ &ndash; 在Terminal / git Bash中敲下面的命令：
+## 生成密钥，一路回车即可（如果需要重新生成注意一下） ssh-keygen -t rsa ## 显示刚才生成的公钥内容，自行拷贝到Gitlab cat ~/.ssh/id_rsa.pub 最后粘贴到账户的ssh配置处。"/>
+
+
+
+    <meta property="og:title" content="Git无密码操作 添加SSHKey" />
+<meta property="og:description" content="Git仓库之间的代码传输协议主要使用ssh协议。而一般搭建Gitlab的时候使用的git用户是没有密码的，因此直接ssh是不能登录的，就需要使用ssh-keygen上传公钥，使用非对称加密传输。下面讲述如何上传你的ssh公钥：
+ &ndash; 在Terminal / git Bash中敲下面的命令：
+## 生成密钥，一路回车即可（如果需要重新生成注意一下） ssh-keygen -t rsa ## 显示刚才生成的公钥内容，自行拷贝到Gitlab cat ~/.ssh/id_rsa.pub 最后粘贴到账户的ssh配置处。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/posts/2016/11/git%E6%97%A0%E5%AF%86%E7%A0%81%E6%93%8D%E4%BD%9C-%E6%B7%BB%E5%8A%A0sshkey/" />
+<meta property="og:image" content="https://example.com"/>
+<meta property="article:published_time" content="2016-11-10T09:40:42+08:00" />
+<meta property="article:modified_time" content="2016-11-10T09:40:42+08:00" />
+
+
+
+
+
+
+    <meta property="article:published_time" content="2016-11-10 09:40:42 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://example.com/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ Achefinil is coming</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://example.com/about/">About</a></li><li><a href="https://example.com/posts/">Posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        One minute
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://example.com/posts/2016/11/git%E6%97%A0%E5%AF%86%E7%A0%81%E6%93%8D%E4%BD%9C-%E6%B7%BB%E5%8A%A0sshkey/">Git无密码操作 添加SSHKey</a>
+      </h1>
+
+      
+
+      <div class="post-content">
+        <blockquote>
+<p>Git仓库之间的代码传输协议主要使用ssh协议。而一般搭建Gitlab的时候使用的git用户是没有密码的，因此直接ssh是不能登录的，就需要使用ssh-keygen上传公钥，使用非对称加密传输。下面讲述如何上传你的ssh公钥：</p>
+</blockquote>
+<p>&ndash; 在Terminal / git Bash中敲下面的命令：</p>
+<pre><code>## 生成密钥，一路回车即可（如果需要重新生成注意一下）
+ssh-keygen -t rsa 
+## 显示刚才生成的公钥内容，自行拷贝到Gitlab
+cat ~/.ssh/id_rsa.pub
+</code></pre><p>最后粘贴到账户的ssh配置处。</p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        16 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        2016-11-10 09:40 &#43;0800
+      </p>
+    </div>
+
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h"></span>
+          <hr />
+        </div>
+
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="https://example.com/posts/2016/11/mac-nginx-%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Mac nginx 相关命令</span>
+              </a>
+            </span>
+          
+
+          
+            <span class="button next">
+              <a href="https://example.com/posts/2016/09/mac-finder-%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%E5%92%8C%E6%96%87%E4%BB%B6%E5%A4%B9/">
+                <span class="button__text">Mac Finder 显示隐藏文件和文件夹</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://example.com">Kim Seong</a></span>
+            
+            
+            <span> <a href="https://example.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://example.com/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+
+
+
+    </body>
+</html>

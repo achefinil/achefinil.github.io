@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Kim Seong ">
+<meta name="description" content="最近为了减少页面加载文件大小，省去了jQuery包。直接使用原生js码了Ajax。
+ /** * @函数说明 Ajax封装 * @修改历史 * 2015-09-18 Achefinil 重写ajax */ function AjaxClass(){ var XmlHttp = false; try { XmlHttp = new XMLHttpRequest();//FireFox专有 } catch(e) { try { XmlHttp = new ActiveXObject(&amp;quot;MSXML2.XMLHTTP&amp;quot;); } catch(e2) { try { XmlHttp = new ActiveXObject(&amp;quot;Microsoft.XMLHTTP&amp;quot;); } catch(e3) { showMsg(&amp;quot;请使用现代浏览器&amp;quot;); XmlHttp = false; } } } var me = this; this.Method = &amp;quot;POST&amp;quot;; this.Url = &amp;quot;&amp;quot;; this.Async = true; this.param = &amp;quot;&amp;quot;; this." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="#252627" />
+<link rel="canonical" href="https://example.com/posts/2015/10/js-ajax/" />
+
+
+    <title>
+        
+            js-Ajax :: 노트 &amp; 생활 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://example.com/main.8ae98aea603ea87ebf368ca924fe2792479c01b94e23c3466fa4b8d86e14dcd2.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://example.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://example.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://example.com/favicon-16x16.png">
+    <link rel="manifest" href="https://example.com/site.webmanifest">
+    <link rel="mask-icon" href="https://example.com/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="https://example.com/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="js-Ajax">
+<meta itemprop="description" content="最近为了减少页面加载文件大小，省去了jQuery包。直接使用原生js码了Ajax。
+ /** * @函数说明 Ajax封装 * @修改历史 * 2015-09-18 Achefinil 重写ajax */ function AjaxClass(){ var XmlHttp = false; try { XmlHttp = new XMLHttpRequest();//FireFox专有 } catch(e) { try { XmlHttp = new ActiveXObject(&quot;MSXML2.XMLHTTP&quot;); } catch(e2) { try { XmlHttp = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;); } catch(e3) { showMsg(&quot;请使用现代浏览器&quot;); XmlHttp = false; } } } var me = this; this.Method = &quot;POST&quot;; this.Url = &quot;&quot;; this.Async = true; this.param = &quot;&quot;; this.">
+<meta itemprop="datePublished" content="2015-10-26T09:40:42&#43;08:00" />
+<meta itemprop="dateModified" content="2015-10-26T09:40:42&#43;08:00" />
+<meta itemprop="wordCount" content="209">
+<meta itemprop="image" content="https://example.com"/>
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://example.com"/>
+
+<meta name="twitter:title" content="js-Ajax"/>
+<meta name="twitter:description" content="最近为了减少页面加载文件大小，省去了jQuery包。直接使用原生js码了Ajax。
+ /** * @函数说明 Ajax封装 * @修改历史 * 2015-09-18 Achefinil 重写ajax */ function AjaxClass(){ var XmlHttp = false; try { XmlHttp = new XMLHttpRequest();//FireFox专有 } catch(e) { try { XmlHttp = new ActiveXObject(&quot;MSXML2.XMLHTTP&quot;); } catch(e2) { try { XmlHttp = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;); } catch(e3) { showMsg(&quot;请使用现代浏览器&quot;); XmlHttp = false; } } } var me = this; this.Method = &quot;POST&quot;; this.Url = &quot;&quot;; this.Async = true; this.param = &quot;&quot;; this."/>
+
+
+
+    <meta property="og:title" content="js-Ajax" />
+<meta property="og:description" content="最近为了减少页面加载文件大小，省去了jQuery包。直接使用原生js码了Ajax。
+ /** * @函数说明 Ajax封装 * @修改历史 * 2015-09-18 Achefinil 重写ajax */ function AjaxClass(){ var XmlHttp = false; try { XmlHttp = new XMLHttpRequest();//FireFox专有 } catch(e) { try { XmlHttp = new ActiveXObject(&quot;MSXML2.XMLHTTP&quot;); } catch(e2) { try { XmlHttp = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;); } catch(e3) { showMsg(&quot;请使用现代浏览器&quot;); XmlHttp = false; } } } var me = this; this.Method = &quot;POST&quot;; this.Url = &quot;&quot;; this.Async = true; this.param = &quot;&quot;; this." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/posts/2015/10/js-ajax/" />
+<meta property="og:image" content="https://example.com"/>
+<meta property="article:published_time" content="2015-10-26T09:40:42+08:00" />
+<meta property="article:modified_time" content="2015-10-26T09:40:42+08:00" />
+
+
+
+
+
+
+    <meta property="article:published_time" content="2015-10-26 09:40:42 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://example.com/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ Achefinil is coming</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://example.com/about/">About</a></li><li><a href="https://example.com/posts/">Posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        One minute
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://example.com/posts/2015/10/js-ajax/">js-Ajax</a>
+      </h1>
+
+      
+
+      <div class="post-content">
+        <blockquote>
+<p>最近为了减少页面加载文件大小，省去了jQuery包。直接使用原生js码了Ajax。</p>
+</blockquote>
+<pre><code>/**
+ * @函数说明 Ajax封装
+ * @修改历史
+ *      2015-09-18  Achefinil   重写ajax
+ */
+function AjaxClass(){
+    var XmlHttp = false;
+    try  {
+        XmlHttp = new XMLHttpRequest();//FireFox专有
+    } catch(e) {
+        try {
+            XmlHttp = new ActiveXObject(&quot;MSXML2.XMLHTTP&quot;);
+        } catch(e2) {
+            try {
+                XmlHttp = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+            } catch(e3) {
+                showMsg(&quot;请使用现代浏览器&quot;);
+                XmlHttp = false;
+            }
+        }
+     }
+    var me = this;
+    this.Method = &quot;POST&quot;;
+    this.Url = &quot;&quot;;
+    this.Async = true;
+    this.param = &quot;&quot;;
+    this.CallBack = function(){};
+    this.Loading = function(){};
+    this.Send = function(){
+        if (this.Url==&quot;&quot;){
+            return false;
+        }
+        if (!XmlHttp){
+            return IframePost();
+        }
+        XmlHttp.open (this.Method, this.Url, this.Async);
+        if (this.Method==&quot;POST&quot;){
+            XmlHttp.setRequestHeader(&quot;Content-Type&quot;,&quot;application/x-www-form-urlencoded&quot;);
+        }
+        XmlHttp.onreadystatechange = function(){
+            if (XmlHttp.readyState == 4){
+                var Result = false;
+                if (XmlHttp.status == 200){
+                    Result = XmlHttp.responseText;
+                }else{
+                    if(XmlHttp.status == 0){
+                        showMsg(&quot;网络异常，请检查您的网络&quot;);
+                    }else{
+                        showMsg(&quot;登陆失败，请稍后重试&quot;);
+                    }
+                    return;
+                }
+                XmlHttp = null;
+                me.CallBack(Result);
+            }else{
+                me.Loading();
+            }
+        };
+
+        if (this.Method==&quot;POST&quot;){
+            XmlHttp.send(this.param);
+        } else {
+            XmlHttp.send(null);
+        }
+    };
+
+    //Iframe方式提交
+    function IframePost(){
+        var Num = 0;
+        var obj = document.createElement(&quot;iframe&quot;);
+        obj.attachEvent(&quot;onload&quot;,function(){
+            me.CallBack(obj.contentWindow.document.body.innerHTML);
+            obj.removeNode();
+        });
+        obj.attachEvent(&quot;onreadystatechange&quot;,function(){ if (Num&gt;=5) {showMsg(false);obj.removeNode();} });
+        obj.src = me.Url;
+        obj.style.display = 'none';
+        document.body.appendChild(obj);
+    }
+}
+</code></pre><blockquote>
+<p>调用方法</p>
+</blockquote>
+<pre><code>//调用ajax
+var Ajax = new AjaxClass();// 创建AJAX对象
+Ajax.Method = &quot;POST&quot;;// 设置请求方式为POST
+Ajax.Url = // URL
+Ajax.Async = true;// 是否异步
+Ajax.param = // 参数
+Ajax.Loading = function(){  //等待函数
+    //  document.write(&quot;loading...&quot;);
+};
+
+Ajax.CallBack = function(response) {
+    // 回调函数 ...
+};
+Ajax.Send();
+</code></pre>
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        209 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        2015-10-26 09:40 &#43;0800
+      </p>
+    </div>
+
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h"></span>
+          <hr />
+        </div>
+
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="https://example.com/posts/2015/10/if-you/">
+                <span class="button__icon">←</span>
+                <span class="button__text">If You</span>
+              </a>
+            </span>
+          
+
+          
+            <span class="button next">
+              <a href="https://example.com/posts/2015/09/20150924/">
+                <span class="button__text">20150924</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://example.com">Kim Seong</a></span>
+            
+            
+            <span> <a href="https://example.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://example.com/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+
+
+
+    </body>
+</html>
